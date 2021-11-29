@@ -1,0 +1,44 @@
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) {
+
+	header nav ul li {
+		padding: 1rem 4rem;
+	}
+
+	header nav ul {
+		justify-content: center;
+	}
+
+	#sectionIconos {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.carrusel {
+		display: grid;
+		grid-template-columns: 1fr 1fr; 
+		grid-template-rows: 1fr 1fr; 
+		gap: 0rem 1rem;
+	}
+
+	.footer-grid {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+	.carrusel {
+		display: flex;
+		flex-direction: row;
+		overflow-x: auto;
+		max-width: 99vw;
+		justify-content: space-between;
+	}
+}
+

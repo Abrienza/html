@@ -1,0 +1,155 @@
+
+/* Bloque uno SASS */
+
+/* VARIABLES */
+
+/* Generales */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap');
+
+$fontMain: 'Raleway', sans-serif;
+
+*{
+	margin: 0;
+	padding: 0;
+	color: #262626;
+	font-family: $fontMain;
+}
+
+/* Variables*/
+
+$primary:#1658DD;
+$secondary:#19F887;
+$main:#7A7575;
+$info:#746A6A;
+
+$gradient: linear-gradient(175deg, #ffd14a 0, #ffbf3e 16.67%, #ffa729 33.33%, #f28705 50%, #e46500 66.67%, #dc4700 83.33%, #d92800 100%);
+
+// Definimos las variables de colores para asignarlas consistentemente.
+$textBlack: #262626;
+$textBlacklight:  #595959;
+$textGreyStrong:  #8C8C8C;
+$textGreyLight:  #BFBFBF;
+$textGreyWaight:  #F2EEEB;
+$textDarkBlue:  #03588C;
+$textMediumBlue:  #0378A6;
+$textLightBlue:  #8FC4D9;
+$textOrangeLight:  #F28705;
+$textOrangeStrong:  #F25C05;
+
+// Creamos una lista de mapas para poder iterar y generar las clases.
+$colors:(
+	textBlack: $textBlack, 
+	textBlacklight: $textBlacklight, 
+	textGreyStrong: $textGreyStrong,
+	textGreyLight: $textGreyLight,
+	textGreyWaight: $textGreyWaight,
+	textDarkBlue: $textDarkBlue,
+	textMediumBlue: $textMediumBlue,
+	textLightBlue: $textLightBlue,
+	textOrangeLight: $textOrangeLight,
+	textOrangeStrong: $textOrangeStrong,
+);
+
+// Iteramos sobre el mapa de colores para generar las clases
+
+//bucle que trae los valores del map
+@each $name-color, $color in $colors{
+	.#{$name-color}{
+		color: $color;
+	}
+}
+
+// padding margin
+$px-1:1em;
+$px-2:0,5em;
+$mx-1:1em;
+$mx-2:0,5em;
+
+//display
+$d-flex:flex;
+
+
+//sizing
+$w-50:50%;
+$w-25:25%;
+
+/* Margin y Padding
+$padding-small: 1rem;
+$padding-medium: 2rem;
+$padding-large: 3rem;
+$margin-small: 1rem;
+$margin-medium: 2rem;
+$margin-large: 3rem;
+*/
+
+
+/* Margin y Padding*/
+
+.padding-small {
+	padding: 1rem;
+}
+
+.padding-medium {
+	padding: 2rem;
+}
+
+.padding-large {
+	padding: 3rem;
+}
+
+.margin-small {
+	margin: 1rem;
+}
+
+.margin-medium {
+	margin: 1rem;
+}
+
+.margin-large {
+	margin: 1rem;
+}
+
+/* paleta de colores */
+
+/*
+.textBlack {
+	color: #262626;
+}
+
+.textBlacklight {
+	color: #595959;
+}
+
+.textGreyStrong {
+	color: #8C8C8C;
+}
+
+.textGreyLight {
+	color: #BFBFBF;
+}
+
+.textGreyWaight {
+	color: #F2EEEB;
+}
+
+.textDarkBlue {
+	color: #03588C;
+}
+
+.textMediumBlue {
+	color: #0378A6;
+}
+
+.textLightBlue {
+	color: #8FC4D9;
+}
+
+.textOrangeLight {
+	color: #F28705;
+}
+
+.textOrangeStrong {
+	color: #F25C05;
+}
+*/
