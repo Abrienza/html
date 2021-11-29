@@ -1,0 +1,19 @@
+{
+  "name": "formador_de_deportistas",
+  "version": "1.0.0",
+  "description": "paquete formador de deportistas",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm     run build-css\""
+  },
+  "author": "Ayelen Brienza",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

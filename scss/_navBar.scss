@@ -1,0 +1,52 @@
+
+/* Inicia NAV BOOSTRAP
+.nav-boos{
+	background-color:#F25C05;
+	padding: 1rem;
+}
+
+.nav-boos-botones{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.nav-boos-botones-unidad{
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+Cierra NAV BOOSTRAP */
+
+
+/* Inicia FLEX nav-unica*/
+
+nav {
+	background-color: $textGreyWaight;
+	ul {
+		display: $d-flex;
+		justify-content: space-around;
+		align-items: center;
+		padding-inline-start: 0px;
+		li {
+			list-style: none;
+			text-align: center;
+			list-style-position: outside;
+			list-style: none;
+    		border-radius: 10px;
+    		border-width: thin;
+			margin: 5px;
+			padding: 2px;
+			background-image: $gradient;
+			a {
+				color: #F2EEEB;
+				font-size: 2rem;
+				font-weight: 500;
+				text-decoration: none;
+				text-transform: capitalize;
+				&:hover{
+					color:$textLightBlue;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,427 @@
+/* Bloque uno SASS */
+
+// mixin de sombra para los heading
+// @include text-shadow(2px, 3px, 5px, green);
+@mixin text-shadow($x:5px,$y: 5px,$blur:3px,$color:$textBlacklight){
+	text-shadow: $x $y $blur $color;
+}
+
+//mixin de sombra para cajas
+//@include box-shadow();
+@mixin box-shadow($x:2px,$y:4px,$blur:6px,$color:grey){
+	box-shadow: $x $y $blur $color;
+}
+
+#logo{
+	@include box-shadow(20px);
+}
+
+#logoMarca{
+		display: $d-flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: $mx-1;
+		}
+
+#textoLogo{
+	text-align: center;
+	color: $textBlacklight;
+	@include text-shadow(2px,2px);
+	margin: $mx-1;
+}
+
+
+
+/*
+main{
+	background-color:$textOrangeLight;
+	padding: 20px;
+	display: $d-flex;
+}
+
+section{
+	h3{
+		font-family: $fontMain;
+		color: $secondary;
+	}
+	p{
+		font-size: $textMedium;
+		line-height: 1.4em;
+		color:$main;
+	}
+}
+
+aside{
+	background-color: $primary;
+}*/
+
+
+
+body {
+	background-image: url(./assets/img/back_principal.jpg);
+	background-attachment: fixed;
+	background-position:center;
+	background-size: cover;
+	margin: 1rem;
+	overflow-x: clip; /* Magia */
+}
+
+/* HEADER */
+
+.logo {
+	display: flex;
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* INICIA GRID - FIRST MOVILE */
+
+.body-grid {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "header" "main" "footer";
+}
+
+.header-grid {
+	margin-top: 10px;
+}
+
+.main-grid {
+	grid-area: main;
+}
+
+
+/* Inicia Animaciones-transform-transiciones*/
+
+.skew:hover{
+	transform:skewY(5deg);
+	cursor: pointer;
+	transition: transform 1s;
+}
+
+.transform:hover{
+	transform: translateY(-5px);
+	cursor: pointer;
+	transition: transform 2s;
+}
+
+.bounce-in-top {
+	-webkit-animation: bounce-in-top 1.1s both;
+	        animation: bounce-in-top 1.1s both;
+}
+
+ @-webkit-keyframes bounce-in-top {
+	0% {
+	  -webkit-transform: translateY(-500px);
+			  transform: translateY(-500px);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	  opacity: 0;
+	}
+	38% {
+	  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	  opacity: 1;
+	}
+	55% {
+	  -webkit-transform: translateY(-65px);
+			  transform: translateY(-65px);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	72% {
+	  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+	81% {
+	  -webkit-transform: translateY(-28px);
+			  transform: translateY(-28px);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	90% {
+	  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+	95% {
+	  -webkit-transform: translateY(-8px);
+			  transform: translateY(-8px);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	100% {
+	  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+  }
+  @keyframes bounce-in-top {
+	0% {
+	  -webkit-transform: translateY(-500px);
+			  transform: translateY(-500px);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	  opacity: 0;
+	}
+	38% {
+	  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	  opacity: 1;
+	}
+	55% {
+	  -webkit-transform: translateY(-65px);
+			  transform: translateY(-65px);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	72% {
+	  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+	81% {
+	  -webkit-transform: translateY(-28px);
+			  transform: translateY(-28px);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	90% {
+	  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+	95% {
+	  -webkit-transform: translateY(-8px);
+			  transform: translateY(-8px);
+	  -webkit-animation-timing-function: ease-in;
+			  animation-timing-function: ease-in;
+	}
+	100% {
+	  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+	  -webkit-animation-timing-function: ease-out;
+			  animation-timing-function: ease-out;
+	}
+  }
+  
+/* Termina Animaciones-transform-transiciones*/
+
+/* iNICIA carrusel-unico*/
+
+.section-carrusel-boos{
+	display: flex;
+	flex-direction: row;
+	width: auto;
+	max-width: 99vw;
+	align-items: center;
+	justify-content: center;
+}
+
+.carrusel-automatico {
+	height: 90vh;
+}
+
+.carrusel-automatico-p {
+	font-size: 4em;
+	font-weight: 800;
+}
+
+.article-carrusel-boos {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+}
+
+.img-carrusel-boos {
+	padding-top: 2rem;
+	height: 150px;
+
+}
+
+.carrusel {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.carrusel > * img {  /* Magia */
+	height: 250px;
+}
+
+/* Inicia section-para-que (img) */
+
+#sectionParaque{
+				padding: 3rem 3rem;
+    			margin-top: 2rem;
+    			text-align: center;
+    			background-image: url(../assets/img/porque_un_coach2.jpg);
+}
+
+#articleParaque{		
+				h2{
+					text-align: center;
+					color: $textDarkBlue;
+				}
+				p{
+					color: $textBlack;
+				}
+}
+
+
+
+/*
+#tituloParaque{
+	color: $textDarkBlue;
+	text-align: center;
+	text-decoration: solid;
+}
+
+#textParaque{
+	color: $textBlack;
+	text-align: center;
+	text-decoration: solid;
+}*/
+
+
+/*.paraQue {
+	padding: 3rem 3rem;
+    margin-top: 2rem;
+    text-align: center;
+    background-image: url(../assets/img/porque_un_coach2.jpg);
+}*/
+
+
+/* Inicia section-entrenate (iconos) */
+
+/*.section-entrenate-iconos-boos{
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+}*/
+
+/*
+#sectionIconos {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 2rem 1rem;
+    margin: 1rem;
+    border: 5px dotted #262626;
+    border-radius: 10px;
+    border-width: thin;
+		img{
+			width: 50%;
+		}
+		p{
+			color: $textDarkBlue
+		}
+}
+*/
+
+
+#sectionIconos {	
+	padding: 2rem 1rem;
+    margin: 1rem;
+    text-align: center;
+    clear: both;
+    border: 5px dotted #262626;
+    border-radius: 10px;
+	border-width: thin;
+
+	img { 
+		height: 100px;
+	}
+
+	p {
+		color: $textDarkBlue
+	}
+}
+
+/* DISCIPLINAS */
+
+/* Inicia section-disciplinas */
+
+.grupo-disciplina {
+	display: flex;
+}
+
+.disciplinas {
+	flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* articulo-disciplina */
+
+.texto-disciplina {
+	font-size: 1.8rem;
+}
+
+/* section-disciplinas-conoce-mas (link-youtube) */
+
+.videos-disciplinas {
+	margin: 0rem 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/* PROPUESTA */
+/* info-lista (tres-pasos) */
+
+/* section.propuesta  */
+/* info-tabla (ejercicios)*/
+
+/* info-link-insta (logros)*/
+
+.info-link-insta-logros {
+	display: flex;
+	justify-content: space-between;
+	margin: 3rem
+}
+
+
+/* SOBRE MI */
+/* info.sobre mi */
+/* info-link-insta (conoce-mas) */
+/* info-preguntas-frecuentes */
+
+
+/* CONTACTO */
+
+/* formulario-contacto */
+
+form {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+select option {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+textarea {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+

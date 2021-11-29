@@ -1,0 +1,51 @@
+/* Inicia estilo SASS*/
+
+footer{
+	background-color: $textGreyLight;
+	padding:$px-2;
+	text-align: center;
+	font-size: $textBig;
+}
+
+
+
+/* INICIA GRID - FIRST MOVILE */
+
+.footer-grid {
+	margin-top: 1rem;
+	padding: 2rem;
+	text-align: center;
+	grid-area: footer;
+	background-image: linear-gradient(10deg, #ffffff 0, #f3f4f4 12.5%, #d5e6ea 25%, #b3d6e1 37.5%, #8fc4d9 50%, #6ab2d3 62.5%, #44a0ce 75%, #1290ca 87.5%, #0081c6 100%);
+}
+
+/*FOOTER*/
+
+.footer-boos {
+	margin-top: 1rem;
+	padding: 2rem;
+	text-align: center;
+	background-image: linear-gradient(10deg, #ffffff 0, #f3f4f4 12.5%, #d5e6ea 25%, #b3d6e1 37.5%, #8fc4d9 50%, #6ab2d3 62.5%, #44a0ce 75%, #1290ca 87.5%, #0081c6 100%);
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	}
+
+.footer-boos-article {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* footer {
+	display: flex;
+	justify-content: space-between;
+	margin: 4rem
+} */
+
+/* info-contactanos */
+/* logo */
+/* info-seguinos */
+
+
+
