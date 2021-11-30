@@ -2,12 +2,58 @@
 
 $fontMain: 'Raleway', sans-serif;
 
+html {
+	font-size: 62.5%;
+}
+
 /*Variables Texto*/
 
-$textSmall:1em;
-$textMedium:2em;
-$textBig:3em;
+//font size
+$font-very-small: 1.5rem;
+$font-small: 2rem;
+$font-medium: 3rem;
+$font-big: 4rem;
 
+//font weight
+$font-light: 500;
+$font-heavy: 800;
+
+//text align
+$textLeft: left;
+$textRight: right;
+$textCenter: center;
+
+h1 {
+	font-size: 4rem;
+	font-weight: 800
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: 800;
+}
+
+h3 {
+	font-size: 2rem;
+	font-weight: 800;
+}
+
+h4 {
+	font-size: 3rem;
+	font-weight:800;
+	color: #F25C05;
+}
+
+p {
+	color: #262626;
+	font-size: 2rem;
+	line-height: 2,6rem;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	font-weight: 500;
+}
+
+/* clases fonts */
 
 .font-very-small {
 	font-size: 1.5rem;
@@ -43,38 +89,4 @@ $textBig:3em;
 
 .textCenter {
 	text-align: center;
-}
-
-html {
-	font-size: 62.5%;
-}
-
-h1 {
-	font-size: 4rem;
-	font-weight: 800
-}
-
-h2 {
-	font-size: 3rem;
-	font-weight: 800;
-}
-
-h3 {
-	font-size: 2rem;
-	font-weight: 800;
-}
-
-h4 {
-	font-size: 3rem;
-	font-weight:800;
-	color: #F25C05;
-}
-
-p {
-	color: #262626;
-	font-size: 2rem;
-	line-height: 2,6rem;
-	letter-spacing: 1px;
-	word-spacing: 2px;
-	font-weight: 500;
 }

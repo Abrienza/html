@@ -1,83 +1,59 @@
-/* Bloque uno SASS */
-
-// mixin de sombra para los heading
-// @include text-shadow(2px, 3px, 5px, green);
+// mixin de sombra logotipo
+// @include text-shadow(1px, 1px, 1px, color);
 @mixin text-shadow($x:5px,$y: 5px,$blur:3px,$color:$textBlacklight){
 	text-shadow: $x $y $blur $color;
 }
 
-//mixin de sombra para cajas
-//@include box-shadow();
-@mixin box-shadow($x:2px,$y:4px,$blur:6px,$color:grey){
+//mixin logo
+//@include box-shadow(Npx);
+@mixin box-shadow($x:2px,$y:4px,$blur:6px,$color:$textBlacklight){
 	box-shadow: $x $y $blur $color;
 }
 
-#logo{
+#logo {
 	@include box-shadow(20px);
 }
 
-#logoMarca{
+#logoMarca {
 		display: $d-flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: $mx-1;
+		margin: $margin-medium;
 		}
 
-#textoLogo{
+#textoLogo {
 	text-align: center;
 	color: $textBlacklight;
 	@include text-shadow(2px,2px);
-	margin: $mx-1;
+	margin: $margin-medium;
 }
-
-
-
-/*
-main{
-	background-color:$textOrangeLight;
-	padding: 20px;
-	display: $d-flex;
-}
-
-section{
-	h3{
-		font-family: $fontMain;
-		color: $secondary;
-	}
-	p{
-		font-size: $textMedium;
-		line-height: 1.4em;
-		color:$main;
-	}
-}
-
-aside{
-	background-color: $primary;
-}*/
-
 
 
 body {
+	font-family: $fontMain;
+}
+
+/*body {
 	background-image: url(./assets/img/back_principal.jpg);
 	background-attachment: fixed;
 	background-position:center;
 	background-size: cover;
 	margin: 1rem;
-	overflow-x: clip; /* Magia */
-}
+	overflow-x: clip;
+}*/
 
 /* HEADER */
 
-.logo {
+/*.logo {
 	display: flex;
 	flex-basis: 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
+}*/
 
-/* INICIA GRID - FIRST MOVILE */
+/* INICIA GRID - FIRST */
 
 .body-grid {
 	margin: 0;
@@ -96,7 +72,6 @@ body {
 .main-grid {
 	grid-area: main;
 }
-
 
 /* Inicia Animaciones-transform-transiciones*/
 
@@ -241,7 +216,8 @@ body {
 
 .carrusel-automatico-p {
 	font-size: 4em;
-	font-weight: 800;
+	font-weight: $font-light;
+	font-size: $font-big;
 }
 
 .article-carrusel-boos {
@@ -262,30 +238,30 @@ body {
     overflow-x: scroll;
 }
 
-.carrusel > * img {  /* Magia */
+.carrusel > * img {
 	height: 250px;
 }
 
 /* Inicia section-para-que (img) */
 
-#sectionParaque{
-				padding: 3rem 3rem;
-    			margin-top: 2rem;
-    			text-align: center;
+#sectionParaque {
+				padding: $padding-large;
+    			margin-top: $margin-small;
+    			text-align: $textCenter;
     			background-image: url(../assets/img/porque_un_coach2.jpg);
 }
 
-#articleParaque{		
-				h2{
-					text-align: center;
+#articleParaque {		
+				h2 {
+					text-align: $textCenter;
 					color: $textDarkBlue;
+					font-weight: $font-heavy;
 				}
-				p{
+				p {
 					color: $textBlack;
+					font-weight: $font-heavy;
 				}
 }
-
-
 
 /*
 #tituloParaque{
@@ -300,7 +276,6 @@ body {
 	text-decoration: solid;
 }*/
 
-
 /*.paraQue {
 	padding: 3rem 3rem;
     margin-top: 2rem;
@@ -308,8 +283,26 @@ body {
     background-image: url(../assets/img/porque_un_coach2.jpg);
 }*/
 
-
 /* Inicia section-entrenate (iconos) */
+
+#sectionIconos {	
+	padding: $padding-small;
+    margin: $margin-small;
+    text-align: $textCenter;
+    clear: both;
+    border: 5px dotted $textBlack;
+    border-radius: 10px;
+	border-width: thin;
+	background-color: $textGreyLight;
+
+	img { 
+		height: 130px;
+	}
+
+	p {
+		color: $textBlack
+	}
+}
 
 /*.section-entrenate-iconos-boos{
 	display: flex;
@@ -335,25 +328,6 @@ body {
 		}
 }
 */
-
-
-#sectionIconos {	
-	padding: 2rem 1rem;
-    margin: 1rem;
-    text-align: center;
-    clear: both;
-    border: 5px dotted #262626;
-    border-radius: 10px;
-	border-width: thin;
-
-	img { 
-		height: 100px;
-	}
-
-	p {
-		color: $textDarkBlue
-	}
-}
 
 /* DISCIPLINAS */
 
@@ -383,7 +357,6 @@ body {
 	justify-content: space-between;
 }
 
-
 /* PROPUESTA */
 /* info-lista (tres-pasos) */
 
@@ -398,12 +371,10 @@ body {
 	margin: 3rem
 }
 
-
 /* SOBRE MI */
 /* info.sobre mi */
 /* info-link-insta (conoce-mas) */
 /* info-preguntas-frecuentes */
-
 
 /* CONTACTO */
 
@@ -423,5 +394,3 @@ textarea {
 	font-size: 1.5rem;
 	font-weight: 500;
 }
-
-
