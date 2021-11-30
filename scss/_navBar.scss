@@ -1,3 +1,35 @@
+/* Inicia FLEX nav-unica*/
+
+nav {
+	background-color: $textGreyWaight;
+	ul {
+		display: $d-flex;
+		justify-content: space-around;
+		align-items: center;
+		padding-inline-start: 0px;
+		li {
+			list-style: none;
+			text-align: center;
+			list-style-position: outside;
+			list-style: none;
+    		border-radius: 10px;
+    		border-width: thin;
+			margin: $margin-small;
+			padding: $padding-small;
+			background-image: $gradient;
+			a {
+				color: $textGreyWaight;
+				font-size: $font-small;
+				font-weight: $font-light;
+				text-decoration: none;
+				text-transform: capitalize;
+				&:hover {
+					color:$textLightBlue;
+				}
+			}
+		}
+	}
+}
 
 /* Inicia NAV BOOSTRAP
 .nav-boos{
@@ -16,37 +48,3 @@
 	padding-right: 3rem;
 }
 Cierra NAV BOOSTRAP */
-
-
-/* Inicia FLEX nav-unica*/
-
-nav {
-	background-color: $textGreyWaight;
-	ul {
-		display: $d-flex;
-		justify-content: space-around;
-		align-items: center;
-		padding-inline-start: 0px;
-		li {
-			list-style: none;
-			text-align: center;
-			list-style-position: outside;
-			list-style: none;
-    		border-radius: 10px;
-    		border-width: thin;
-			margin: 5px;
-			padding: 2px;
-			background-image: $gradient;
-			a {
-				color: #F2EEEB;
-				font-size: 2rem;
-				font-weight: 500;
-				text-decoration: none;
-				text-transform: capitalize;
-				&:hover{
-					color:$textLightBlue;
-				}
-			}
-		}
-	}
-}

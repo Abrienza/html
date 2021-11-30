@@ -1,9 +1,4 @@
-
-/* Bloque uno SASS */
-
-/* VARIABLES */
-
-/* Generales */
+/* Variables Generales */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap');
 
@@ -16,14 +11,7 @@ $fontMain: 'Raleway', sans-serif;
 	font-family: $fontMain;
 }
 
-/* Variables*/
-
-$primary:#1658DD;
-$secondary:#19F887;
-$main:#7A7575;
-$info:#746A6A;
-
-$gradient: linear-gradient(175deg, #ffd14a 0, #ffbf3e 16.67%, #ffa729 33.33%, #f28705 50%, #e46500 66.67%, #dc4700 83.33%, #d92800 100%);
+/* Paleta de Colores*/
 
 // Definimos las variables de colores para asignarlas consistentemente.
 $textBlack: #262626;
@@ -60,31 +48,25 @@ $colors:(
 	}
 }
 
-// padding margin
-$px-1:1em;
-$px-2:0,5em;
-$mx-1:1em;
-$mx-2:0,5em;
+//Gradiente
 
-//display
-$d-flex:flex;
+$gradient: linear-gradient(175deg, #ffd14a 0, #ffbf3e 16.67%, #ffa729 33.33%, #f28705 50%, #e46500 66.67%, #dc4700 83.33%, #d92800 100%);
 
+/*Variables Padding y Margin*/
 
-//sizing
-$w-50:50%;
-$w-25:25%;
-
-/* Margin y Padding
+$padding-very-small:0,5rem;
 $padding-small: 1rem;
 $padding-medium: 2rem;
 $padding-large: 3rem;
+$margin-very-small:0,5rem;
 $margin-small: 1rem;
 $margin-medium: 2rem;
 $margin-large: 3rem;
-*/
 
+/* Display */
+$d-flex:flex;
 
-/* Margin y Padding*/
+/* Clases Margin y Padding */
 
 .padding-small {
 	padding: 1rem;
