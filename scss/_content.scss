@@ -1,12 +1,12 @@
 // mixin de sombra logotipo
 // @include text-shadow(1px, 1px, 1px, color);
-@mixin text-shadow($x:5px,$y: 5px,$blur:3px,$color:$textBlacklight){
+@mixin text-shadow($x:5px,$y: 5px,$blur:3px,$color: $textBlacklight){
 	text-shadow: $x $y $blur $color;
 }
 
 //mixin logo
 //@include box-shadow(Npx);
-@mixin box-shadow($x:2px,$y:4px,$blur:6px,$color:$textBlacklight){
+@mixin box-shadow($x:2px,$y:4px,$blur:6px,$color: $textBlacklight){
 	box-shadow: $x $y $blur $color;
 }
 
@@ -23,12 +23,11 @@
 		}
 
 #textoLogo {
-	text-align: center;
+	text-align: center; 
 	color: $textBlacklight;
 	@include text-shadow(2px,2px);
 	margin: $margin-medium;
 }
-
 
 body {
 	font-family: $fontMain;
@@ -332,7 +331,7 @@ body {
 /* DISCIPLINAS */
 
 /* Inicia section-disciplinas */
-
+/*
 .grupo-disciplina {
 	display: flex;
 }
@@ -344,7 +343,7 @@ body {
 }
 
 /* articulo-disciplina */
-
+/*
 .texto-disciplina {
 	font-size: 1.8rem;
 }
@@ -352,9 +351,9 @@ body {
 /* section-disciplinas-conoce-mas (link-youtube) */
 
 .videos-disciplinas {
-	margin: 0rem 2rem;
+	margin: 0rem 4rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 /* PROPUESTA */
@@ -367,18 +366,33 @@ body {
 
 .info-link-insta-logros {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	margin: 3rem
 }
 
 /* SOBRE MI */
 /* info.sobre mi */
+
 /* info-link-insta (conoce-mas) */
+
+.info-link-insta-conoce-mas {
+	display: flex;
+	justify-content: space-around;
+	margin: 3rem
+}
+
 /* info-preguntas-frecuentes */
 
 /* CONTACTO */
 
 /* formulario-contacto */
+
+.iconos-contacto{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 1rem
+}
 
 form {
 	font-size: 2rem;

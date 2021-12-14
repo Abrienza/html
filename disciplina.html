@@ -6,19 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!-- Bootstrap CSS
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <!-- General meta tags y títilo -->
+        <title>La Disciplina en el deporte - Coach y Formador de Deportistas - Gabriel Herkovits</title>
+        <meta name="description" content="Descubra que puedo asistirlo para mejorar su rendimiento en disciplinas como Stand up Paddle, Triathlon, Running, Aguas Abiertas, Ciclismo y Fitness."/>
+        <meta name="keywords" content="coach, deporte, formador, gabriel, herkovits, series, rutina, pasadas, stand up paddle, ciclismo, aguas abiertas, triathlon, running, fitness, correr, natación, entrevista, remoto, plan, planning"/>
         
         <!-- mi css -->
         <link rel="stylesheet" href="css/main.css">
-
-        <!-- Title -->
-        <title>Gabriel Herkovits - Formador de Deportistas - Inicio</title>
-
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap" rel="stylesheet">
     </head>
 
     <!-- Inicia Body -->
@@ -26,11 +20,11 @@
             
         <!-- Inicia Header -->
         <header class= "header-grid">
-            <div class="textCenter logo">
+            <div id="logoMarca">
                 <a href="./index.html">
-                    <img class="bounce-in-top" src="./assets/img/logo_gabriel.jpg" alt="logo gabriel herkovits" height="100rem">
+                    <img id="logo" class="bounce-in-top" src="./assets/img/logo_gabriel.jpg" alt="logo gabriel herkovits" height="100rem">
                 </a>
-                <h1 class="textGreyStrong">Formador de Deportistas</h1>
+                <h1 id="textoLogo">Formador de Deportistas</h1>
             </div>
             
             <!-- inicia nav Boostrap -->
@@ -42,16 +36,16 @@
                     </button>
                     <div class="collapse navbar-collapse nav-boos-botones" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item nav-boos-botones-unidad">
+                            <li class="nav-item nav-boos-botones-unidad font-heavy">
                                 <a class="nav-link fs-2" aria-current="page" href="./disciplina.html">Disciplina</a>
                             </li>
-                            <li class="nav-item nav-boos-botones-unidad">
+                            <li class="nav-item nav-boos-botones-unidad font-heavy">
                                 <a class="nav-link fs-2" href="propuesta.html">Propuesta</a>
                             </li>
-                            <li class="nav-item nav-boos-botones-unidad">
+                            <li class="nav-item nav-boos-botones-unidad font-heavy">
                                 <a class="nav-link fs-2" href="sobre_mi.html">Sobre mi</a>
                             </li>
-                            <li class="nav-item nav-boos-botones-unidad">
+                            <li class="nav-item nav-boos-botones-unidad font-heavy">
                                 <a class="nav-link fs-2" href="contacto.html" tabindex="-1" aria-disabled="true">Contacto</a>
                             </li>
                         </ul>
@@ -59,58 +53,62 @@
                 </div>
             </nav>
             <!-- cierra nav Boostrap -->
-            
-            <!-- Inicia nav Flex
-            <nav class="textCenter">
-                <ul>
-                    <li><a href="./disciplina.html">Disciplina</a></li>
-                    <li><a href="./propuesta.html">Propuesta</a></li>
-                    <li><a href="./sobre_mi.html">Sobre mi</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav> -->
 
         </header>
         <!-- Cierra Header -->
         <main>
-            <h2 class="textDarkBlue textCenter">Disciplinas posibles</h2>
-            <section class="disciplinas">
-                <div class="grupo-disciplina padding-small">
-                    <article class="padding-small">
-                        <h3 class="textOrangeLight">Stand up Paddle</h3>
-                        <img src="./assets/img/disciplinas_sup.jpg" alt="disciplina stand up paddle" height="100rem">
-                        <p class="font-very-small">El Stand Up Paddle, SUP o Paddlesurf, es un deporte acuático que consiste en ir de pie sobre una tabla deslizándonos sobre una superficie acuática, como el mar, un lago o un río, gracias al impulso que nos proporciona el uso de un remo.</p>
+            <h2 class="textDarkBlue textCenter margin-xlarge">Disciplinas posibles</h2>
+            <section>
+
+                <div class="card-group">
+                    <article class="card">
+                        <img src="./assets/img/disciplinas_ciclismo.jpg" class="card-img-top" alt="hombres haciendo ciclismo">
+                        <div class="card-body">
+                            <h3 class="card-title textOrangeStrong">Ciclismo</h3>
+                            <p class="card-text">El ciclismo de competición es un deporte en el que se utilizan distintos tipos de bicicletas. Hay varias modalidades o disciplinas en el ciclismo de competición como ciclismo en carretera, ciclismo en pista, ciclismo de montaña, trial, ciclocrós y BMX y dentro de ellas varias especialidades.</p>
+                        </div>
                     </article>
-                    <article class="padding-small">
-                        <h3 class="textOrangeLight">Aguas abiertas</h3>
-                        <img src="./assets/img/disciplinas_aguas_abiertas.jpg" alt="hombre nadando" height="100rem">
-                        <p class="font-very-small">La natación en aguas abiertas es una disciplina cuyas pruebas tienen lugar en espacios abiertos naturales como mar abierto, bahías o lagos.</p>
+                    <article class="card">
+                        <img src="./assets/img/disciplinas_aguas_abiertas.jpg" class="card-img-top" alt="hombre nadando">
+                        <div class="card-body">
+                            <h3 class="card-title textOrangeStrong">Aguas abiertas</h3>
+                            <p class="card-text">La natación en aguas abiertas es una disciplina cuyas pruebas tienen lugar en espacios abiertos naturales como mar abierto, bahías o lagos.</p>
+                        </div>
                     </article>
-                    <article class="padding-small">
-                        <h3 class="textOrangeLight">Ciclismo</h3>
-                        <img src="./assets/img/disciplinas_ciclismo.jpg" alt="hombre nadando" height="100rem">
-                        <p class="font-very-small">El ciclismo de competición es un deporte en el que se utilizan distintos tipos de bicicletas. Hay varias modalidades o disciplinas en el ciclismo de competición como ciclismo en carretera, ciclismo en pista, ciclismo de montaña, trial, ciclocrós y BMX y dentro de ellas varias especialidades.</p>
+                    <article class="card">
+                        <img src="./assets/img/disciplinas_sup.jpg" class="card-img-top" alt="disciplina stand up paddle">
+                        <div class="card-body">
+                            <h3 class="card-title textOrangeStrong">Stand up Paddle</h3>
+                            <p class="card-text">El Stand Up Paddle, SUP o Paddlesurf, es un deporte acuático que consiste en ir de pie sobre una tabla deslizándonos sobre una superficie acuática, como el mar, un lago o un río, gracias al impulso que nos proporciona el uso de un remo.</p>
+                        </div>
                     </article>
                 </div>
-                <div class="grupo-disciplina padding-small">
-                    <article class="padding-small">
-                        <h3 class="textOrangeLight titulo-disciplina">Running</h3>
-                        <img src="./assets/img/disciplinas_running.jpg" alt="hombre nadando" height="100rem">
-                        <p class="font-very-small">Running es una palabra inglesa que se refiere a la actividad de correr. ... Quienes desean practicar running de manera competitiva suelen invertir en calzado, ropa deportiva, cronómetros y otros elementos, aunque en general el equipamiento resulta accesible en comparación con otros deportes.</p>
+                <div class="card-group">
+                    <article class="card">
+                        <img src="./assets/img/disciplina_fitness.jpg" class="card-img-top" alt="hombres haciendo ejercicio estatico">
+                        <div class="card-body">
+                            <h3 class="card-title textOrangeStrong">Fitness</h3>
+                            <p class="card-text">El fitness permite que las articulaciones puedan moverse libremente sin dolor y con amplios rangos de movimiento. Al ser una actividad deportiva de alto impacto, te ayuda a estar más relajado y tener menos riesgos de sufrir estrés o depresión.</p>
+                        </div>
                     </article>
-                    <article class="padding-small">
-                        <h3 class="textOrangeLight titulo-disciplina">Triathlon</h3>
-                        <img src="./assets/img/disciplinas_triathlon.jpg" alt="hombre nadando" height="100rem">
-                        <p class="font-very-small">El triatlón es un deporte olímpico​ que implica la realización de 3 disciplinas deportivas, natación, ciclismo y carrera a pie, que se realizan en orden y sin interrupción entre una prueba y la siguiente. </p>
+                    <article class="card">
+                        <img src="./assets/img/disciplinas_triathlon.jpg" class="card-img-top" alt="hombres corriendo en triathlon">
+                        <div class="card-body">
+                            <h3 class="card-title textOrangeStrong">Triathlon</h3>
+                            <p class="card-text">El triatlón es un deporte olímpico​ que implica la realización de 3 disciplinas deportivas, natación, ciclismo y carrera a pie, que se realizan en orden y sin interrupción entre una prueba y la siguiente.</p>
+                        </div>
                     </article>
-                    <article class="padding-small">
-                        <h3 class="textOrangeLight titulo-disciplina">Fitness</h3>
-                        <img src="./assets/img/disciplina_fitness.jpg" alt="hombre nadando" height="100rem">
-                        <p class="font-very-small">El fitness permite que las articulaciones puedan moverse libremente sin dolor y con amplios rangos de movimiento. Al ser una actividad deportiva de alto impacto, te ayuda a estar más relajado y tener menos riesgos de sufrir estrés o depresión.</p>
+                    <article class="card">
+                        <img src="./assets/img/disciplinas_running.jpg" id= "foto-running" class="card-img-top" alt="disciplina stand up paddle">
+                        <div class="card-body">
+                            <h3 class="card-title textOrangeStrong">Running</h3>
+                            <p class="card-text">Running es una palabra inglesa que se refiere a la actividad de correr. ... Quienes desean practicar running de manera competitiva suelen invertir en calzado, ropa deportiva, cronómetros y otros elementos, aunque en general el equipamiento resulta accesible en comparación con otros deportes.</p>
+                        </div>
                     </article>
                 </div>
             </section>
-            <h2 class="textDarkBlue textCenter">Conocé mas sobre deportistas profesionales</h2>
+
+            <h2 class="textDarkBlue textCenter margin-xlarge">Conocé mas sobre deportistas profesionales</h2>
             <section  class="videos-disciplinas">
                 <article class="padding-small">
                     <iframe width="140" height="78,57" 
@@ -158,7 +156,7 @@
                                 <img class= "skew" src="./assets/img/logo_gabriel.jpg" alt="logo gabriel herkovits" height="100rem" class= "card-img-top">
                             </a>
                             <div class="card-body">
-                            <h4 class="card-text textGreyStrong">Formador de Deportistas</h4>
+                            <h4 class="card-text textGreyStrong font-small">Formador de Deportistas</h4>
                             </div>
                         </div>
                     </article>
@@ -185,44 +183,10 @@
             </section>
         </footer>    
         <!-- Cierra Footer Boostrap -->
-
-        <!-- Inicia Footer Flex
-        <footer class="footer-grid">
-            <div>
-                <h4>Contactanos</h4>
-                <p class="textOrangeStrong">Tel. (+54 9 11) 5307-1454</p>
-                <p class="textOrangeStrong">Email. herko1@hotmail.com</p>
-            </div>
-            <div class="textCenter">
-                <a href="./index.html">
-                    <img class= "skew" src="./assets/img/logo_gabriel.jpg" alt="logo gabriel herkovits" height="100rem">
-                </a>
-                <h4 class="textGreyStrong">Formador de Deportistas</h4>
-            </div>
-            <div>
-                <h4>Seguinos</h4>
-                <a href="https://z-p15.www.instagram.com/gabriel.herskovits/?hl=es-la" target="_blank">
-                    <img class="transform" src="./assets/img/icono_instagram.png" alt="instagram" height="50rem">
-                </a>
-                <a href="https://www.facebook.com/gabriel.herskovits" target="_blank">
-                    <img class="transform" src="./assets/img/icono_facebook.png" alt="Facebook" height="50rem">    
-                </a>
-                <a href="https://www.linkedin.com/in/gabrielherskovits/" target="_blank">
-                    <img class="transform" src="./assets/img/icono_linkedin.png" alt="Linkedin" height="50rem">
-                </a>
-                <a href="https://www.youtube.com/user/solidezysalud" target="_blank">
-                    <img class="transform" src="./assets/img/icono_youtube.png" alt="Youtube" height="50rem">
-                </a>
-            </div>
-        </footer> -->
-        
+       
         <!-- Popper and Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        
-        <!-- Popper and Bootstrap JS OPCION WEB
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
-    
+            
     </body>
     <!-- Cierra Body -->
 

@@ -1,37 +1,5 @@
-/* Inicia FLEX nav-unica*/
+/* Inicia NAV BOOSTRAP */
 
-nav {
-	background-color: $textGreyWaight;
-	ul {
-		display: $d-flex;
-		justify-content: space-around;
-		align-items: center;
-		padding-inline-start: 0px;
-		li {
-			list-style: none;
-			text-align: center;
-			list-style-position: outside;
-			list-style: none;
-    		border-radius: 10px;
-    		border-width: thin;
-			margin: $margin-small;
-			padding: $padding-small;
-			background-image: $gradient;
-			a {
-				color: $textGreyWaight;
-				font-size: $font-small;
-				font-weight: $font-light;
-				text-decoration: none;
-				text-transform: capitalize;
-				&:hover {
-					color:$textLightBlue;
-				}
-			}
-		}
-	}
-}
-
-/* Inicia NAV BOOSTRAP
 .nav-boos{
 	background-color:#F25C05;
 	padding: 1rem;
@@ -47,4 +15,4 @@ nav {
 	padding-left: 3rem;
 	padding-right: 3rem;
 }
-Cierra NAV BOOSTRAP */
+/* Cierra NAV BOOSTRAP */

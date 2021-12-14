@@ -63,6 +63,12 @@ $margin-small: 1rem;
 $margin-medium: 2rem;
 $margin-large: 3rem;
 
+/*Fotos Section Disciplina*/
+
+#foto-running{
+	height: 31%;
+}
+
 /* Display */
 $d-flex:flex;
 
@@ -92,46 +98,6 @@ $d-flex:flex;
 	margin: 1rem;
 }
 
-/* paleta de colores */
-
-/*
-.textBlack {
-	color: #262626;
+.margin-xlarge {
+	margin: 4rem;
 }
-
-.textBlacklight {
-	color: #595959;
-}
-
-.textGreyStrong {
-	color: #8C8C8C;
-}
-
-.textGreyLight {
-	color: #BFBFBF;
-}
-
-.textGreyWaight {
-	color: #F2EEEB;
-}
-
-.textDarkBlue {
-	color: #03588C;
-}
-
-.textMediumBlue {
-	color: #0378A6;
-}
-
-.textLightBlue {
-	color: #8FC4D9;
-}
-
-.textOrangeLight {
-	color: #F28705;
-}
-
-.textOrangeStrong {
-	color: #F25C05;
-}
-*/
