@@ -39,6 +39,10 @@
   color: #F25C05; }
 
 /*Variables Padding y Margin*/
+/*Fotos Section Disciplina*/
+#foto-running {
+  height: 31%; }
+
 /* Display */
 /* Clases Margin y Padding */
 .padding-small {
@@ -59,48 +63,9 @@
 .margin-large {
   margin: 1rem; }
 
-/* paleta de colores */
-/*
-.textBlack {
-	color: #262626;
-}
+.margin-xlarge {
+  margin: 4rem; }
 
-.textBlacklight {
-	color: #595959;
-}
-
-.textGreyStrong {
-	color: #8C8C8C;
-}
-
-.textGreyLight {
-	color: #BFBFBF;
-}
-
-.textGreyWaight {
-	color: #F2EEEB;
-}
-
-.textDarkBlue {
-	color: #03588C;
-}
-
-.textMediumBlue {
-	color: #0378A6;
-}
-
-.textLightBlue {
-	color: #8FC4D9;
-}
-
-.textOrangeLight {
-	color: #F28705;
-}
-
-.textOrangeStrong {
-	color: #F25C05;
-}
-*/
 html {
   font-size: 62.5%; }
 
@@ -158,50 +123,21 @@ p {
 .textCenter {
   text-align: center; }
 
-/* Inicia FLEX nav-unica*/
-nav {
-  background-color: #F2EEEB; }
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-inline-start: 0px; }
-    nav ul li {
-      list-style: none;
-      text-align: center;
-      list-style-position: outside;
-      list-style: none;
-      border-radius: 10px;
-      border-width: thin;
-      margin: 1rem;
-      padding: 1rem;
-      background-image: linear-gradient(175deg, #ffd14a 0, #ffbf3e 16.67%, #ffa729 33.33%, #f28705 50%, #e46500 66.67%, #dc4700 83.33%, #d92800 100%); }
-      nav ul li a {
-        color: #F2EEEB;
-        font-size: 2rem;
-        font-weight: 500;
-        text-decoration: none;
-        text-transform: capitalize; }
-        nav ul li a:hover {
-          color: #8FC4D9; }
+/* Inicia NAV BOOSTRAP */
+.nav-boos {
+  background-color: #F25C05;
+  padding: 1rem; }
 
-/* Inicia NAV BOOSTRAP
-.nav-boos{
-	background-color:#F25C05;
-	padding: 1rem;
-}
+.nav-boos-botones {
+  display: flex;
+  align-content: center;
+  justify-content: center; }
 
-.nav-boos-botones{
-	display: flex;
-	align-content: center;
-	justify-content: center;
-}
+.nav-boos-botones-unidad {
+  padding-left: 3rem;
+  padding-right: 3rem; }
 
-.nav-boos-botones-unidad{
-	padding-left: 3rem;
-	padding-right: 3rem;
-}
-Cierra NAV BOOSTRAP */
+/* Cierra NAV BOOSTRAP */
 #logo {
   box-shadow: 20px 4px 6px #595959; }
 
@@ -464,23 +400,28 @@ body {
 */
 /* DISCIPLINAS */
 /* Inicia section-disciplinas */
+/*
 .grupo-disciplina {
-  display: flex; }
+	display: flex;
+}
 
 .disciplinas {
-  flex-direction: column;
-  display: flex;
-  justify-content: space-between; }
+	flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+}
 
 /* articulo-disciplina */
+/*
 .texto-disciplina {
-  font-size: 1.8rem; }
+	font-size: 1.8rem;
+}
 
 /* section-disciplinas-conoce-mas (link-youtube) */
 .videos-disciplinas {
-  margin: 0rem 2rem;
+  margin: 0rem 4rem;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 /* PROPUESTA */
 /* info-lista (tres-pasos) */
@@ -489,15 +430,26 @@ body {
 /* info-link-insta (logros)*/
 .info-link-insta-logros {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 3rem; }
 
 /* SOBRE MI */
 /* info.sobre mi */
 /* info-link-insta (conoce-mas) */
+.info-link-insta-conoce-mas {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem; }
+
 /* info-preguntas-frecuentes */
 /* CONTACTO */
 /* formulario-contacto */
+.iconos-contacto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem; }
+
 form {
   font-size: 2rem;
   font-weight: 500; }
@@ -519,6 +471,11 @@ footer {
   footer p {
     color: #F25C05;
     font-size: 2rem; }
+
+#footerlogo {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .footer-grid {
   margin-top: 1rem;
