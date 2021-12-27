@@ -9,7 +9,7 @@
 		justify-content: center;
 	}
 
-	#sectionIconos {
+	.section-iconos {
 		display: flex;
 		justify-content: space-between;
 	}
@@ -46,4 +46,9 @@
 			}
 		}
 	}
+
+	.conoce-mas {
+		flex-direction: row;
+		justify-content: space-around;
+	}	
 }
