@@ -39,7 +39,20 @@
 		overflow-x: auto;
 		max-width: 99vw;
 		justify-content: space-around;
-}
+	}
+
+	.videos-disciplinas {
+		justify-content: space-around;
+		flex-direction: row;
+
+		article {
+			iframe {
+				height: 150px;
+				width: auto;
+				object-fit: cover;
+			}
+		}
+	}
 }
 
 

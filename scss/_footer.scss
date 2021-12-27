@@ -10,21 +10,6 @@ footer {
 		}
 }
 
-#footerMarca {
-	display: $d-flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: $margin-medium;
-	}
-
-#footerTextologo {
-text-align: center; 
-color: $textBlacklight;
-@include text-shadow(2px,2px);
-margin: $margin-medium;
-}
-
 .footer-boos {
 	margin-top: 2rem;
 	padding: 2rem;

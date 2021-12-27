@@ -1,29 +1,42 @@
+body {
+	font-family: $fontMain;
+}
+
+.logo-marca {
+		display: $d-flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: $margin-medium;
+	img {
+		height: 8rem;
+		object-fit: cover;
+	}
+}
+
 // mixin de sombra logotipo
 // @include text-shadow(1px, 1px, 1px, color);
 @mixin text-shadow($x:2px,$y: 2px,$blur:5px,$color: $textBlacklight){
 	text-shadow: $x $y $blur $color;
 }
 
-#logoMarca {
-		display: $d-flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin: $margin-medium;
-		}
-
-#textoLogo {
+.texto-logo {
 	text-align: center; 
 	color: $textBlacklight;
 	@include text-shadow(2px,2px);
 	margin: $margin-small;
+	font-size: $font-small-medium;
+	font-weight: $font-light;
 }
 
-body {
-	font-family: $fontMain;
-}
+.iconos-redes
+	{
+		height: 50px;
+		object-fit: cover;
+		margin: 0.5rem
+	}
 
-/* AJUSTE DE FOTOS CON FIT */
+/* AJUSTE DE IMG CON FIT */
 
 .foto-carousel{
 	height: 1000px;
@@ -294,7 +307,7 @@ body {
 	}
 }
 
-#tituloVideosdisciplinas {
+.titulo-videos-disciplinas {
 		color: $textDarkBlue;
 		text-align: $textCenter;
 		margin: $margin-Xlarge;
@@ -303,13 +316,20 @@ body {
 		font-weight: $font-light
 }
 
-#videosDisciplinas {
+.videos-disciplinas {
+	padding: $padding-small;
+    margin: $margin-medium;
+	margin-top: 1rem;
+	
 	display: flex;
-	justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;	
+
 	article {
 		iframe {
-			height: 80px;
-			width: 140px;
+			height: 250px;
+			width: 440px;
 			object-fit: cover;
 		}
 	}
