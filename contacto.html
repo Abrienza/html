@@ -10,6 +10,7 @@
         <title>Contactanos - Coach y Formador de Deportistas - Gabriel Herkovits</title>
         <meta name="description" content="Encontrará la forma de contactarnos, y llegar a tener su entrevista y rutina para comenzar."/>
         <meta name="keywords" content="coach, deporte, formador, gabriel, herkovits, series, rutina, pasadas, stand up paddle, ciclismo, aguas abiertas, triathlon, running, fitness, correr, natación, entrevista, remoto, plan, planning"/>
+        <meta name= "author" content="Ayelén Brienza">
         
         <!-- mi css -->
         <link rel="stylesheet" href="css/main.css">
@@ -58,104 +59,125 @@
         <!-- Cierra Header -->
 
         <main>
-            <section class="textCenter">
-                <h2 class="textOrangeStrong margin-xlarge">Contactate</h2>
+            <section class="contacto-info">
+                <h2>Contactate</h2>
                 <article>
-                    <p class="textOrangeStrong">Tel. (+54 9 11) 5307-1454</p>
-                    <p class="textOrangeStrong">Email. herko1@hotmail.com</p>
+                    <p>Tel. (+54 9 11) 5307-1454</p>
+                    <p>Email. herko1@hotmail.com</p>
                 </article>
             </section>
 
-            <section>
-                <h2 class="textOrangeStrong textCenter margin-xlarge">Visitanos</h2>
+            <section class="contacto-seguinos">
+                <h2>Visitanos</h2>
                 <article>
                         <a class= "iconos-contacto" href="https://z-p15.www.instagram.com/gabriel.herskovits/?hl=es-la" target="_blank">
-                            <img src="./assets/img/icono_instagram.png" alt="instagram" height="50rem">
+                            <img src="./assets/img/icono_instagram.png" alt="logo instagram">
                         </a>
                         <a class= "iconos-contacto" href="https://www.facebook.com/gabriel.herskovits" target="_blank">
-                            <img src="./assets/img/icono_facebook.png" alt="Facebook" height="50rem">    
+                            <img src="./assets/img/icono_facebook.png" alt="logo Facebook">    
                         </a>
                         <a class= "iconos-contacto" href="https://www.linkedin.com/in/gabrielherskovits/" target="_blank">
-                            <img src="./assets/img/icono_linkedin.png" alt="Linkedin" height="50rem">
+                            <img src="./assets/img/icono_linkedin.png" alt="logo Linkedin">
                         </a>
                         <a class= "iconos-contacto" href="https://www.youtube.com/user/solidezysalud" target="_blank">
-                            <img src="./assets/img/icono_youtube.png" alt="Youtube" height="50rem">
+                            <img src="./assets/img/icono_youtube.png" alt="logo Youtube">
                         </a>
                 </article>
             </section>
 
             <section>
-                <h2 class="textOrangeStrong textCenter margin-xlarge">Escribinos</h2>
+                <h2 class="titulo">Escribinos</h2>
                 <!--Aquí comienza el formulario-->
-                <form class= "font-small font-light margin-xlarge textCenter" action="archivo.php" method="post" target="_blank">
-                    <fieldset>
-                        <legend class= "margin-xlarge">Datos personales</legend>
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name"required="name">
-                        <label for="surname">Apellido</label>
-                        <input type="text" id="surname" name="surname">
-                        <br><br>
-                        <label for="edad">Edad</label>
-                        <input type="number" id="age" name="age">
-                        <br>
-                        <br>
-                        <p>Sexo
-                        <label for="femenino">F</label>
-                        <input type="radio" id="femenino" name="sexo" value="femenino">
-                        <label for="masculino">M</label>
-                        <input type="radio" id="masculino" name="sexo" value="masculino">
-                        </p>
-                    </fieldset>
-                    <fieldset>
-                        <legend class= "margin-xlarge">Datos de contacto</legend>
-                        <label for="tel">Teléfono</label>
-                        <input type="tel" id="tel" name="tel"placeholder="(11)-0000-0000"required="tel">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="correoElectronico" placeholder="gabriel_h@gmail.com"required="email">
-                    </fieldset>
-                    <fieldset>
-                        <legend class= "margin-xlarge">Datos deportivos</legend>
-                        <br>
-                        <label for="disciplina">Disciplina en la que estás interesado</label>
-                        <select id="disciplina" name="disciplina" multiple>
-                        <option value="aguas_abiertas">Aguas Abiertas</option>
-                        <option value="ciclismo">Ciclismo</option>
-                        <option value="running">Running</option>
-                        <option value="stand_up_paddle">Stand up Paddle</option>
-                        <option value="triathlon">Triathlon</option>
-                        <option value="otra">Otra</option>
+                <form class="row g-3 contacto-form" action="archivo.php" method="post" target="_blank">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Nombre y Apellido</label>
+                        <input type="name" class="form-control" id="name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="herko1@hotmail.com">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="celular" class="form-label">Celular</label>
+                        <input type="tel" class="form-control" id="celular" placeholder="(54911)-0000-0000"required="tel">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="disciplina" class="form-label">Disciplina</label>
+                        <select id="disciplina" class="form-select">
+                            <option selected>Running</option>
+                            <option>SUP</option>
+                            <option>Triathlon</option>
+                            <option>Fitness</option>
+                            <option>Aguas Abiertas</option>
+                            <option>Ciclismo</option>
                         </select>
-                    </fieldset>
-                    <br>
-                    <textarea name="consulta" maxlength="200">Escriba su consulta aquí</textarea>
-                    <br>
-                    <label for="accept">Acepto los términos y condiciones</label>
-                    <input type="checkbox" id="accept" name="accept" value="si" required>
-                    <br>
-                    <input type="reset" value="Borrar contenido">
-                    <input type="submit" value="Enviar">
-                </form>        
+                    </div>
+                    <div class="col-md-2">
+                        <label for="edad" class="form-label">Edad</label>
+                        <input type="number" class="form-control" id="edad">
+                    </div>
+                    <div class="col-12">
+                        <label for="consulta" class="form-label" maxlength="200">Escriba su consulta aquí</label>
+                        <input type="text" class="form-control" id="consulta" placeholder="Desearía consultar si es posible...">
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Quisiera recibir novedades
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary" id="boton-enviar">Enviar</button>
+                    </div>
+                </form>
+                <!--Aquí cierra el formulario-->
             </section>
         </main>
 
-        <!-- Inicia Footer Boostrap -->
+        <!-- Inicia Footer -->
         <footer>
+            <article id="footerMarca">
+                <a href="./index.html">
+                    <img class="skew" src="./assets/img/logo_gabriel.jpg" alt="logo gabriel herkovits" height="100rem">
+                </a>
+                <h1 id="footerTextologo">Formador de Deportistas</h1>
+            </article>
             <section class="py-2 footer-boos">
-                <div class="">
-                    <article id="footerlogo" class="footer-boos-article">
-                        <div style="width: 40rem" class="col-lg-12 col-xs-12">
-                            <a href="./index.html">
-                                <img class= "skew" src="./assets/img/logo_gabriel.jpg" alt="logo gabriel herkovits" height="100rem" class= "card-img-top">
-                            </a>
+                <div class="row container-fluid">
+                    <article class="col-lg-6 col-xs-6 footer-boos-article">
+                        <div style="width: 40rem" class="col-lg-12 col-xs-12 text-center">
+                            <h4>Contactanos</h4>
                             <div class="card-body">
-                            <h4 class="card-text textGreyStrong font-small">Formador de Deportistas</h4>
+                                <p class="card-text">Tel. (+54 9 11) 5307-1454</p>
+                                <p class="card-text">Email. herko1@hotmail.com</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-6 col-xs-6 footer-boos-article">
+                        <div style="width: 40rem" class="col-lg-12 col-xs-12">
+                            <h4 class="card-text">Seguinos</h4>
+                            <div class="card-body">
+                                <a class="card-img-top" href="https://z-p15.www.instagram.com/gabriel.herskovits/?hl=es-la" target="_blank">
+                                    <img class="transform footer.img.boos" src="./assets/img/icono_instagram.png" alt="instagram" height="50rem">
+                                </a>
+                                <a class="card-img-top" href="https://www.facebook.com/gabriel.herskovits" target="_blank">
+                                    <img class="transform footer.img.boos" src="./assets/img/icono_facebook.png" alt="Facebook" height="50rem">    
+                                </a>
+                                <a class="card-img-top" href="https://www.linkedin.com/in/gabrielherskovits/" target="_blank">
+                                    <img class="transform footer.img.boos" src="./assets/img/icono_linkedin.png" alt="Linkedin" height="50rem">
+                                </a>
+                                <a class="card-img-top" href="https://www.youtube.com/user/solidezysalud" target="_blank">
+                                    <img class="transform footer.img.boos" src="./assets/img/icono_youtube.png" alt="Youtube" height="50rem">
+                                </a>
                             </div>
                         </div>
                     </article>
                 </div>
             </section>
         </footer>    
-        <!-- Cierra Footer Boostrap -->
+        <!-- Cierra Footer -->
         
         <!-- Popper and Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

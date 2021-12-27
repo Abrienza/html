@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variables Generales */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap");
@@ -40,9 +41,6 @@
 
 /*Variables Padding y Margin*/
 /*Fotos Section Disciplina*/
-#foto-running {
-  height: 31%; }
-
 /* Display */
 /* Clases Margin y Padding */
 .padding-small {
@@ -138,9 +136,6 @@ p {
   padding-right: 3rem; }
 
 /* Cierra NAV BOOSTRAP */
-#logo {
-  box-shadow: 20px 4px 6px #595959; }
-
 #logoMarca {
   display: flex;
   flex-direction: column;
@@ -151,28 +146,22 @@ p {
 #textoLogo {
   text-align: center;
   color: #595959;
-  text-shadow: 2px 2px 3px #595959;
-  margin: 2rem; }
+  text-shadow: 2px 2px 5px #595959;
+  margin: 1rem; }
 
 body {
   font-family: "Raleway", sans-serif; }
 
-/*body {
-	background-image: url(./assets/img/back_principal.jpg);
-	background-attachment: fixed;
-	background-position:center;
-	background-size: cover;
-	margin: 1rem;
-	overflow-x: clip;
-}*/
-/* HEADER */
-/*.logo {
-	display: flex;
-	flex-basis: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}*/
+/* AJUSTE DE FOTOS CON FIT */
+.foto-carousel {
+  height: 1000px;
+  object-fit: cover; }
+
+.foto-disciplinas {
+  height: 270px;
+  object-fit: cover;
+  padding: 1rem; }
+
 /* INICIA GRID - FIRST */
 .body-grid {
   margin: 0;
@@ -190,7 +179,7 @@ body {
 
 /* Inicia Animaciones-transform-transiciones*/
 .skew:hover {
-  transform: skewY(5deg);
+  transform: skewY(2deg);
   cursor: pointer;
   transition: transform 1s; }
 
@@ -292,178 +281,239 @@ body {
     animation-timing-function: ease-out; } }
 
 /* Termina Animaciones-transform-transiciones*/
-/* iNICIA carrusel-unico*/
-.section-carrusel-boos {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  max-width: 99vw;
-  align-items: center;
-  justify-content: center; }
-
+/* Inicia carrusel-unico*/
 .carrusel-automatico {
-  height: 90vh; }
+  height: 99vh; }
 
-.carrusel-automatico-p {
-  font-size: 4em;
-  font-weight: 500;
-  font-size: 4rem; }
+/* Termina carrusel-unico*/
+/* Formato Título y Subtítulo */
+.titulo, .sobre-mi h2, .sobre-mi .h2, .contacto-info h2, .contacto-info .h2, .contacto-seguinos h2, .contacto-seguinos .h2 {
+  text-align: center;
+  margin: 4rem;
+  margin-top: 6rem;
+  color: #03588C;
+  font-size: 3rem;
+  font-weight: 800;
+  font-size: 4rem;
+  font-weight: 500; }
 
-.article-carrusel-boos {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center; }
+.subtitulo, .sobre-mi h3, .sobre-mi .h3, .contacto-info article p {
+  text-align: center;
+  font-size: 3rem;
+  color: #F25C05; }
 
-.img-carrusel-boos {
-  padding-top: 2rem;
-  height: 150px; }
-
-.carrusel {
-  width: 100%;
-  overflow-x: scroll; }
-
-.carrusel > * img {
-  height: 250px; }
+.texto, .sobre-mi p, #accordionPreguntasFrecuentes button {
+  text-align: center;
+  color: #262626;
+  font-size: 2rem;
+  line-height: 2,6rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 500; }
 
 /* Inicia section-para-que (img) */
 #sectionParaque {
   padding: 3rem;
   margin-top: 1rem;
-  text-align: center;
-  background-image: url(../assets/img/porque_un_coach2.jpg); }
+  text-align: center; }
 
 #articleParaque h2, #articleParaque .h2 {
   text-align: center;
   color: #03588C;
+  font-size: 3rem;
   font-weight: 800; }
 
 #articleParaque p {
-  color: #262626;
-  font-weight: 800; }
+  color: #262626; }
 
-/*
-#tituloParaque{
-	color: $textDarkBlue;
-	text-align: center;
-	text-decoration: solid;
-}
-
-#textParaque{
-	color: $textBlack;
-	text-align: center;
-	text-decoration: solid;
-}*/
-/*.paraQue {
-	padding: 3rem 3rem;
-    margin-top: 2rem;
-    text-align: center;
-    background-image: url(../assets/img/porque_un_coach2.jpg);
-}*/
 /* Inicia section-entrenate (iconos) */
 #sectionIconos {
   padding: 1rem;
-  margin: 1rem;
+  margin: 2rem;
   text-align: center;
   clear: both;
-  border: 5px dotted #262626;
+  border: 2px dotted #262626;
   border-radius: 10px;
-  border-width: thin;
-  background-color: #BFBFBF; }
+  border-width: thin; }
   #sectionIconos img {
-    height: 130px; }
+    height: 130px;
+    object-fit: cover; }
   #sectionIconos p {
     color: #262626; }
 
-/*.section-entrenate-iconos-boos{
-	display: flex;
-	align-content: center;
-	justify-content: space-around;
-}*/
-/*
-#sectionIconos {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	padding: 2rem 1rem;
-    margin: 1rem;
-    border: 5px dotted #262626;
-    border-radius: 10px;
-    border-width: thin;
-		img{
-			width: 50%;
-		}
-		p{
-			color: $textDarkBlue
-		}
-}
-*/
 /* DISCIPLINAS */
-/* Inicia section-disciplinas */
-/*
-.grupo-disciplina {
-	display: flex;
-}
+#sectionDisciplinas h2, #sectionDisciplinas .h2 {
+  color: #03588C;
+  text-align: center;
+  margin: 4rem;
+  margin-top: 6rem;
+  font-size: 4rem;
+  font-weight: 500; }
 
-.disciplinas {
-	flex-direction: column;
-	display: flex;
-	justify-content: space-between;
-}
+#sectionDisciplinas div article {
+  border: 2px dotted #262626;
+  border-radius: 10px;
+  border-width: thin;
+  margin: 1rem; }
+  #sectionDisciplinas div article div h3, #sectionDisciplinas div article div .h3 {
+    font-size: 3rem;
+    text-align: center; }
+  #sectionDisciplinas div article div p {
+    text-align: center;
+    font-size: 2rem; }
 
-/* articulo-disciplina */
-/*
-.texto-disciplina {
-	font-size: 1.8rem;
-}
+#tituloVideosdisciplinas {
+  color: #03588C;
+  text-align: center;
+  margin: 4rem;
+  margin-top: 6rem;
+  font-size: 4rem;
+  font-weight: 500; }
 
-/* section-disciplinas-conoce-mas (link-youtube) */
-.videos-disciplinas {
-  margin: 0rem 4rem;
+#videosDisciplinas {
   display: flex;
   justify-content: space-around; }
+  #videosDisciplinas article iframe {
+    height: 80px;
+    width: 140px;
+    object-fit: cover; }
 
 /* PROPUESTA */
-/* info-lista (tres-pasos) */
-/* section.propuesta  */
-/* info-tabla (ejercicios)*/
-/* info-link-insta (logros)*/
-.info-link-insta-logros {
-  display: flex;
-  justify-content: space-around;
-  margin: 3rem; }
+.tituloPropuesta {
+  color: #03588C;
+  text-align: center;
+  margin: 4rem;
+  margin-top: 6rem;
+  font-size: 4rem;
+  font-weight: 500; }
+
+#sectionPropuesta div article {
+  border: 2px dotted #262626;
+  border-radius: 10px;
+  border-width: thin;
+  margin: 1rem;
+  margin: 2rem 3rem; }
+  #sectionPropuesta div article div h3, #sectionPropuesta div article div .h3 {
+    font-size: 3rem;
+    text-align: center; }
+  #sectionPropuesta div article div p {
+    text-align: center;
+    font-size: 2rem; }
+
+#sectionLogros {
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+  clear: both; }
+  #sectionLogros img {
+    height: 300px;
+    object-fit: cover;
+    margin: 2rem; }
 
 /* SOBRE MI */
-/* info.sobre mi */
-/* info-link-insta (conoce-mas) */
 .info-link-insta-conoce-mas {
   display: flex;
   justify-content: space-around;
   margin: 3rem; }
 
-/* info-preguntas-frecuentes */
-/* CONTACTO */
-/* formulario-contacto */
-.iconos-contacto {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 1rem; }
+.img-conoce-mas {
+  height: 300px;
+  object-fit: cover;
+  margin: 2rem; }
 
-form {
+/* Preguntas frecuentes (acordeon) */
+.respuestas-acordeon {
+  color: #03588C;
+  text-align: left;
   font-size: 2rem;
+  line-height: 2,6rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
   font-weight: 500; }
 
-select option {
-  font-size: 1.5rem;
-  font-weight: 500; }
+/* CONTACTO */
+.contacto-seguinos article {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .contacto-seguinos article a img {
+    height: 50px;
+    object-fit: cover;
+    margin: 0.5rem; }
 
-textarea {
-  font-size: 1.5rem;
-  font-weight: 500; }
+/* formulario-contacto */
+.contacto-form {
+  padding: 2rem;
+  background-color: #F28705;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #262626;
+  border: 2px dotted #262626;
+  border-radius: 10px;
+  border-width: thin;
+  margin: 0rem 12rem !important; }
+  .contacto-form label {
+    color: #262626;
+    font-size: 2rem;
+    line-height: 2,6rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 500; }
+  .contacto-form select {
+    color: #262626;
+    font-size: 2rem;
+    line-height: 2,6rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 500;
+    border-radius: 10px;
+    border-width: thin; }
+  .contacto-form input {
+    color: #262626;
+    font-size: 2rem;
+    line-height: 2,6rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 500;
+    border-radius: 10px;
+    border-width: thin; }
+  .contacto-form textarea {
+    color: #262626;
+    font-size: 2rem;
+    line-height: 2,6rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 500; }
+
+#boton-enviar {
+  align-items: center;
+  text-align: center;
+  color: #262626;
+  font-size: 2rem;
+  line-height: 2,6rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 500;
+  padding: 1rem 3rem 1rem 3rem;
+  border: 2px dotted #262626;
+  border-radius: 10px;
+  border-width: thin;
+  margin-left: 45rem;
+  background-color: #F2EEEB; }
+
+.ejemplo-chiquito {
+  margin: 10px; }
+
+.ejemplo-mediano {
+  margin: 20px; }
+
+.ejemplo-grande {
+  margin: 30px; }
+
+.ejemplo.primero {
+  padding: 10px; }
 
 footer {
-  background-color: #BFBFBF;
   padding-top: 8rem /2; }
   footer h4, footer .h4 {
     color: #F25C05;
@@ -472,20 +522,21 @@ footer {
     color: #F25C05;
     font-size: 2rem; }
 
-#footerlogo {
+#footerMarca {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center; }
+  margin: 2rem; }
 
-.footer-grid {
-  margin-top: 1rem;
-  padding: 2rem;
+#footerTextologo {
   text-align: center;
-  grid-area: footer;
-  background-image: linear-gradient(10deg, #ffffff 0, #f3f4f4 12.5%, #d5e6ea 25%, #b3d6e1 37.5%, #8fc4d9 50%, #6ab2d3 62.5%, #44a0ce 75%, #1290ca 87.5%, #0081c6 100%); }
+  color: #595959;
+  text-shadow: 2px 2px 5px #595959;
+  margin: 2rem; }
 
 .footer-boos {
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 2rem;
   text-align: center;
   background-image: linear-gradient(10deg, #ffffff 0, #f3f4f4 12.5%, #d5e6ea 25%, #b3d6e1 37.5%, #8fc4d9 50%, #6ab2d3 62.5%, #44a0ce 75%, #1290ca 87.5%, #0081c6 100%);
@@ -518,12 +569,12 @@ footer {
     justify-content: space-between; } }
 
 @media only screen and (min-width: 1200px) {
-  .carrusel {
+  .logros {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
     max-width: 99vw;
-    justify-content: space-between; } }
+    justify-content: space-around; } }
 
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)

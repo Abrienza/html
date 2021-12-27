@@ -1,6 +1,5 @@
 footer {
-	background-color: $textGreyLight;
-	padding-top: 8rem /2;
+		padding-top: 8rem /2;
 		h4{
 			color: $textOrangeStrong;
 			font-size: $font-medium;
@@ -11,22 +10,23 @@ footer {
 		}
 }
 
-#footerlogo{
-	display: flex;
-	align-items: center;
+#footerMarca {
+	display: $d-flex;
+	flex-direction: column;
 	justify-content: center;
-}
+	align-items: center;
+	margin: $margin-medium;
+	}
 
-.footer-grid {
-	margin-top: 1rem;
-	padding: 2rem;
-	text-align: center;
-	grid-area: footer;
-	background-image: linear-gradient(10deg, #ffffff 0, #f3f4f4 12.5%, #d5e6ea 25%, #b3d6e1 37.5%, #8fc4d9 50%, #6ab2d3 62.5%, #44a0ce 75%, #1290ca 87.5%, #0081c6 100%);
+#footerTextologo {
+text-align: center; 
+color: $textBlacklight;
+@include text-shadow(2px,2px);
+margin: $margin-medium;
 }
 
 .footer-boos {
-	margin-top: 1rem;
+	margin-top: 2rem;
 	padding: 2rem;
 	text-align: center;
 	background-image: linear-gradient(10deg, #ffffff 0, #f3f4f4 12.5%, #d5e6ea 25%, #b3d6e1 37.5%, #8fc4d9 50%, #6ab2d3 62.5%, #44a0ce 75%, #1290ca 87.5%, #0081c6 100%);

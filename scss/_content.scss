@@ -1,17 +1,7 @@
 // mixin de sombra logotipo
 // @include text-shadow(1px, 1px, 1px, color);
-@mixin text-shadow($x:5px,$y: 5px,$blur:3px,$color: $textBlacklight){
+@mixin text-shadow($x:2px,$y: 2px,$blur:5px,$color: $textBlacklight){
 	text-shadow: $x $y $blur $color;
-}
-
-//mixin logo
-//@include box-shadow(Npx);
-@mixin box-shadow($x:2px,$y:4px,$blur:6px,$color: $textBlacklight){
-	box-shadow: $x $y $blur $color;
-}
-
-#logo {
-	@include box-shadow(20px);
 }
 
 #logoMarca {
@@ -26,31 +16,26 @@
 	text-align: center; 
 	color: $textBlacklight;
 	@include text-shadow(2px,2px);
-	margin: $margin-medium;
+	margin: $margin-small;
 }
 
 body {
 	font-family: $fontMain;
 }
 
-/*body {
-	background-image: url(./assets/img/back_principal.jpg);
-	background-attachment: fixed;
-	background-position:center;
-	background-size: cover;
-	margin: 1rem;
-	overflow-x: clip;
-}*/
+/* AJUSTE DE FOTOS CON FIT */
 
-/* HEADER */
+.foto-carousel{
+	height: 1000px;
+	object-fit: cover;
+}
 
-/*.logo {
-	display: flex;
-	flex-basis: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}*/
+.foto-disciplinas{
+	height: 270px;
+	object-fit: cover;
+	padding: $padding-small;
+}
+
 
 /* INICIA GRID - FIRST */
 
@@ -75,7 +60,7 @@ body {
 /* Inicia Animaciones-transform-transiciones*/
 
 .skew:hover{
-	transform:skewY(5deg);
+	transform:skewY(2deg);
 	cursor: pointer;
 	transition: transform 1s;
 }
@@ -198,48 +183,42 @@ body {
   
 /* Termina Animaciones-transform-transiciones*/
 
-/* iNICIA carrusel-unico*/
-
-.section-carrusel-boos{
-	display: flex;
-	flex-direction: row;
-	width: auto;
-	max-width: 99vw;
-	align-items: center;
-	justify-content: center;
-}
+/* Inicia carrusel-unico*/
 
 .carrusel-automatico {
-	height: 90vh;
+					height: 99vh;
 }
+/* Termina carrusel-unico*/
 
-.carrusel-automatico-p {
-	font-size: 4em;
-	font-weight: $font-light;
+/* Formato Título y Subtítulo */
+
+.titulo {
+	text-align: $textCenter;
+	margin: $margin-Xlarge;
+	margin-top: 6rem;
+	color: $textDarkBlue;
+	font-size: $font-medium;
+	font-weight: $font-heavy;
 	font-size: $font-big;
+	font-weight: $font-light;
 }
 
-.article-carrusel-boos {
-	display: flex;
-	flex-direction: row;
-	align-content: center;
-	justify-content: center;
+.subtitulo {
+	text-align: $textCenter;
+	font-size: $font-medium;
+	color: $textOrangeStrong;
 }
 
-.img-carrusel-boos {
-	padding-top: 2rem;
-	height: 150px;
-
+.texto {
+	text-align: $textCenter;
+	color: $textBlack;
+	font-size: $font-small;
+	line-height: 2,6rem;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	font-weight: $font-light;
 }
 
-.carrusel {
-    width: 100%;
-    overflow-x: scroll;
-}
-
-.carrusel > * img {
-	height: 250px;
-}
 
 /* Inicia section-para-que (img) */
 
@@ -247,55 +226,34 @@ body {
 				padding: $padding-large;
     			margin-top: $margin-small;
     			text-align: $textCenter;
-    			background-image: url(../assets/img/porque_un_coach2.jpg);
 }
 
 #articleParaque {		
 				h2 {
 					text-align: $textCenter;
 					color: $textDarkBlue;
+					font-size: $font-medium;
 					font-weight: $font-heavy;
 				}
 				p {
 					color: $textBlack;
-					font-weight: $font-heavy;
 				}
 }
-
-/*
-#tituloParaque{
-	color: $textDarkBlue;
-	text-align: center;
-	text-decoration: solid;
-}
-
-#textParaque{
-	color: $textBlack;
-	text-align: center;
-	text-decoration: solid;
-}*/
-
-/*.paraQue {
-	padding: 3rem 3rem;
-    margin-top: 2rem;
-    text-align: center;
-    background-image: url(../assets/img/porque_un_coach2.jpg);
-}*/
 
 /* Inicia section-entrenate (iconos) */
 
 #sectionIconos {	
 	padding: $padding-small;
-    margin: $margin-small;
+    margin: $margin-medium;
     text-align: $textCenter;
     clear: both;
-    border: 5px dotted $textBlack;
+    border: 2px dotted $textBlack;
     border-radius: 10px;
 	border-width: thin;
-	background-color: $textGreyLight;
 
 	img { 
 		height: 130px;
+		object-fit: cover;
 	}
 
 	p {
@@ -303,77 +261,109 @@ body {
 	}
 }
 
-/*.section-entrenate-iconos-boos{
-	display: flex;
-	align-content: center;
-	justify-content: space-around;
-}*/
-
-/*
-#sectionIconos {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	padding: 2rem 1rem;
-    margin: 1rem;
-    border: 5px dotted #262626;
-    border-radius: 10px;
-    border-width: thin;
-		img{
-			width: 50%;
-		}
-		p{
-			color: $textDarkBlue
-		}
-}
-*/
-
 /* DISCIPLINAS */
 
-/* Inicia section-disciplinas */
-/*
-.grupo-disciplina {
-	display: flex;
+#sectionDisciplinas{
+	h2 {
+		color: $textDarkBlue;
+		text-align: $textCenter;
+		margin: $margin-Xlarge;
+		margin-top: 6rem;
+		font-size: $font-big;
+		font-weight: $font-light
+	}
+
+	div {
+			article {
+				border: 2px dotted $textBlack;
+				border-radius: 10px;
+				border-width: thin;
+				margin: $margin-small;
+					div {
+						
+							h3 {
+								font-size: $font-medium;
+								text-align: $textCenter;
+							}
+							p {
+								text-align: $textCenter;
+								font-size: $font-small;
+							}
+					}
+			}
+	}
 }
 
-.disciplinas {
-	flex-direction: column;
-	display: flex;
-	justify-content: space-between;
+#tituloVideosdisciplinas {
+		color: $textDarkBlue;
+		text-align: $textCenter;
+		margin: $margin-Xlarge;
+		margin-top: 6rem;
+		font-size: $font-big;
+		font-weight: $font-light
 }
 
-/* articulo-disciplina */
-/*
-.texto-disciplina {
-	font-size: 1.8rem;
-}
-
-/* section-disciplinas-conoce-mas (link-youtube) */
-
-.videos-disciplinas {
-	margin: 0rem 4rem;
+#videosDisciplinas {
 	display: flex;
 	justify-content: space-around;
+	article {
+		iframe {
+			height: 80px;
+			width: 140px;
+			object-fit: cover;
+		}
+	}
 }
 
 /* PROPUESTA */
-/* info-lista (tres-pasos) */
 
-/* section.propuesta  */
-/* info-tabla (ejercicios)*/
+.tituloPropuesta { 	
+	color: $textDarkBlue;
+	text-align: $textCenter;
+	margin: $margin-Xlarge;
+	margin-top: 6rem;
+	font-size: $font-big;
+	font-weight: $font-light	
+}
 
-/* info-link-insta (logros)*/
+#sectionPropuesta {
+					div {
+						
+						article {
+							border: 2px dotted $textBlack;
+							border-radius: 10px;
+							border-width: thin;
+							margin: $margin-small;
+							margin: 2rem 3rem;
+									div {
+										
+											h3 {
+												font-size: $font-medium;
+												text-align: $textCenter;
+											}
+											p {
+												text-align: $textCenter;
+												font-size: $font-small;
+											}
+									}
+						}
+					}
+}
 
-.info-link-insta-logros {
-	display: flex;
-	justify-content: space-around;
-	margin: 3rem
+#sectionLogros {	
+	padding: $padding-small;
+    margin: $margin-medium;
+    text-align: $textCenter;
+    clear: both;
+
+	img { 
+		height: 300px;
+		object-fit: cover;
+		margin: $margin-medium;
+	}
 }
 
 /* SOBRE MI */
-/* info.sobre mi */
-
-/* info-link-insta (conoce-mas) */
 
 .info-link-insta-conoce-mas {
 	display: flex;
@@ -381,30 +371,156 @@ body {
 	margin: 3rem
 }
 
-/* info-preguntas-frecuentes */
+.img-conoce-mas {
+	height: 300px;
+	object-fit: cover;
+	margin: $margin-medium;
+}
+
+.sobre-mi {
+	h2 {
+		@extend .titulo;
+	}
+	h3 {
+		@extend .subtitulo;
+	}
+	p {
+		@extend .texto;
+	}
+}
+
+/* Preguntas frecuentes (acordeon) */
+
+#accordionPreguntasFrecuentes {
+	button {
+		@extend .texto;
+	}
+}
+
+.respuestas-acordeon {
+	color: $textDarkBlue;
+	text-align: $textLeft;
+	font-size: $font-small;
+	line-height: 2,6rem;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	font-weight: $font-light;
+
+}
 
 /* CONTACTO */
 
+.contacto-info {
+	h2 {
+		@extend .titulo;
+	}
+	article {
+		p {
+			@extend .subtitulo;
+		}
+	}
+}
+
+.contacto-seguinos {
+	h2 {
+		@extend .titulo;
+	}
+	article {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+			a {
+				img {
+					height: 50px;
+					object-fit: cover;
+					margin: 0.5rem
+				}
+			}
+	}
+}
+
 /* formulario-contacto */
 
-.iconos-contacto{
-	display: flex;
-	justify-content: space-around;
+.contacto-form {
+	padding: $padding-medium;
+	background-color: $textOrangeLight;
+	font-size: $font-small;
+	font-weight: $font-light;
+	color: $textBlack;
+	border: 2px dotted $textBlack;
+    border-radius: 10px;
+	border-width: thin;
+	margin: 0rem 12rem !important;
+
+	label {
+		color: $textBlack;
+		font-size: $font-small;
+		line-height: 2,6rem;
+		letter-spacing: 1px;
+		word-spacing: 2px;
+		font-weight: $font-light;
+	}
+
+	select {
+		color: $textBlack;
+		font-size: $font-small;
+		line-height: 2,6rem;
+		letter-spacing: 1px;
+		word-spacing: 2px;
+		font-weight: $font-light;
+		border-radius: 10px;
+		border-width: thin;
+	}
+
+	input {
+		color: $textBlack;
+		font-size: $font-small;
+		line-height: 2,6rem;
+		letter-spacing: 1px;
+		word-spacing: 2px;
+		font-weight: $font-light;
+		border-radius: 10px;
+		border-width: thin;
+	}
+	textarea {
+		color: $textBlack;
+		font-size: $font-small;
+		line-height: 2,6rem;
+		letter-spacing: 1px;
+		word-spacing: 2px;
+		font-weight: $font-light;
+	}
+}
+
+#boton-enviar {
 	align-items: center;
-	margin: 1rem
+	text-align: $textCenter;
+	color: $textBlack;
+	font-size: $font-small;
+	line-height: 2,6rem;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	font-weight: $font-light;
+	padding: 1rem 3rem 1rem 3rem;
+	border: 2px dotted $textBlack;
+    border-radius: 10px;
+	border-width: thin;
+	margin-left: 45rem;
+	background-color: $textGreyWaight;
+
 }
 
-form {
-	font-size: 2rem;
-	font-weight: 500;
-}
-
-select option {
-	font-size: 1.5rem;
-	font-weight: 500;
-}
-
-textarea {
-	font-size: 1.5rem;
-	font-weight: 500;
+.ejemplo {
+	&-chiquito {
+		margin: 10px;
+	}
+	&-mediano {
+		margin: 20px;
+	}
+	&-grande {
+		margin: 30px;
+	}
+	&.primero {
+		padding: 10px;
+	}
 }
