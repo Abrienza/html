@@ -312,7 +312,7 @@ body {
   font-size: 3rem;
   color: #f25c05; }
 
-.texto, .sobre-mi p, #accordionPreguntasFrecuentes button {
+.texto, .sobre-mi p, #accordion-preguntas-frecuentes button {
   text-align: center;
   color: #262626;
   font-size: 2rem;
@@ -352,7 +352,7 @@ body {
     color: #262626; }
 
 /* DISCIPLINAS */
-#sectionDisciplinas h2, #sectionDisciplinas .h2 {
+#section-disciplinas h2, #section-disciplinas .h2 {
   color: #03588c;
   text-align: center;
   margin: 4rem;
@@ -360,15 +360,15 @@ body {
   font-size: 4rem;
   font-weight: 500; }
 
-#sectionDisciplinas div article {
+#section-disciplinas div article {
   border: 2px dotted #262626;
   border-radius: 10px;
   border-width: thin;
   margin: 1rem; }
-  #sectionDisciplinas div article div h3, #sectionDisciplinas div article div .h3 {
+  #section-disciplinas div article div h3, #section-disciplinas div article div .h3 {
     font-size: 3rem;
     text-align: center; }
-  #sectionDisciplinas div article div p {
+  #section-disciplinas div article div p {
     text-align: center;
     font-size: 2rem; }
 
@@ -393,7 +393,7 @@ body {
     object-fit: cover; }
 
 /* PROPUESTA */
-.tituloPropuesta {
+.titulo-propuesta {
   color: #03588c;
   text-align: center;
   margin: 4rem;
@@ -401,16 +401,16 @@ body {
   font-size: 4rem;
   font-weight: 500; }
 
-#sectionPropuesta div article {
+#section-propuesta div article {
   border: 2px dotted #262626;
   border-radius: 10px;
   border-width: thin;
   margin: 1rem;
   margin: 2rem 3rem; }
-  #sectionPropuesta div article div h3, #sectionPropuesta div article div .h3 {
+  #section-propuesta div article div h3, #section-propuesta div article div .h3 {
     font-size: 3rem;
     text-align: center; }
-  #sectionPropuesta div article div p {
+  #section-propuesta div article div p {
     text-align: center;
     font-size: 2rem; }
 

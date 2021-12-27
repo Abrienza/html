@@ -204,7 +204,7 @@ body {
 /* Formato Título y Subtítulo */
 
 .titulo {
-	text-align: $textCenter;
+	text-align: center;
 	margin: $margin-Xlarge;
 	margin-top: 6rem;
 	color: $textDarkBlue;
@@ -215,13 +215,13 @@ body {
 }
 
 .subtitulo {
-	text-align: $textCenter;
+	text-align: center;
 	font-size: $font-medium;
 	color: $textOrangeStrong;
 }
 
 .texto {
-	text-align: $textCenter;
+	text-align: center;
 	color: $textBlack;
 	font-size: $font-small;
 	line-height: 2, 6rem;
@@ -235,12 +235,12 @@ body {
 .section-paraque {
 	padding: $padding-large;
 	margin-top: $margin-small;
-	text-align: $textCenter;
+	text-align: center;
 }
 
 .article-paraque {
 	h2 {
-		text-align: $textCenter;
+		text-align: center;
 		color: $textDarkBlue;
 		font-size: $font-medium;
 		font-weight: $font-heavy;
@@ -255,7 +255,7 @@ body {
 .section-iconos {
 	padding: $padding-small;
 	margin: $margin-medium;
-	text-align: $textCenter;
+	text-align: center;
 	clear: both;
 	border: 2px dotted $textBlack;
 	border-radius: 10px;
@@ -273,16 +273,15 @@ body {
 
 /* DISCIPLINAS */
 
-#sectionDisciplinas {
+#section-disciplinas {
 	h2 {
 		color: $textDarkBlue;
-		text-align: $textCenter;
+		text-align: center;
 		margin: $margin-Xlarge;
 		margin-top: 6rem;
 		font-size: $font-big;
 		font-weight: $font-light;
 	}
-
 	div {
 		article {
 			border: 2px dotted $textBlack;
@@ -292,10 +291,10 @@ body {
 			div {
 				h3 {
 					font-size: $font-medium;
-					text-align: $textCenter;
+					text-align: center;
 				}
 				p {
-					text-align: $textCenter;
+					text-align: center;
 					font-size: $font-small;
 				}
 			}
@@ -305,7 +304,7 @@ body {
 
 .titulo-videos-disciplinas {
 	color: $textDarkBlue;
-	text-align: $textCenter;
+	text-align: center;
 	margin: $margin-Xlarge;
 	margin-top: 6rem;
 	font-size: $font-big;
@@ -332,16 +331,16 @@ body {
 
 /* PROPUESTA */
 
-.tituloPropuesta {
+.titulo-propuesta {
 	color: $textDarkBlue;
-	text-align: $textCenter;
+	text-align: center;
 	margin: $margin-Xlarge;
 	margin-top: 6rem;
 	font-size: $font-big;
 	font-weight: $font-light;
 }
 
-#sectionPropuesta {
+#section-propuesta {
 	div {
 		article {
 			border: 2px dotted $textBlack;
@@ -352,10 +351,10 @@ body {
 			div {
 				h3 {
 					font-size: $font-medium;
-					text-align: $textCenter;
+					text-align: center;
 				}
 				p {
-					text-align: $textCenter;
+					text-align: center;
 					font-size: $font-small;
 				}
 			}
@@ -409,7 +408,7 @@ body {
 
 /* Preguntas frecuentes (acordeon) */
 
-#accordionPreguntasFrecuentes {
+#accordion-preguntas-frecuentes {
 	button {
 		@extend .texto;
 	}
@@ -417,7 +416,7 @@ body {
 
 .respuestas-acordeon {
 	color: $textDarkBlue;
-	text-align: $textLeft;
+	text-align: left;
 	font-size: $font-small;
 	line-height: 2, 6rem;
 	letter-spacing: 1px;
@@ -511,7 +510,7 @@ body {
 
 #boton-enviar {
 	align-items: center;
-	text-align: $textCenter;
+	text-align: center;
 	color: $textBlack;
 	font-size: $font-small;
 	line-height: 2, 6rem;
