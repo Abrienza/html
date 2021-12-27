@@ -39,50 +39,28 @@
 .textOrangeStrong {
   color: #f25c05; }
 
-/*Variables Padding y Margin*/
-/*Fotos Section Disciplina*/
+/* Gradiente */
+/* Variables Padding y Margin */
 /* Display */
-/* Clases Margin y Padding */
-.padding-small {
-  padding: 1rem; }
-
-.padding-medium {
-  padding: 2rem; }
-
-.padding-large {
-  padding: 3rem; }
-
-.margin-small {
-  margin: 1rem; }
-
-.margin-medium {
-  margin: 1rem; }
-
-.margin-large {
-  margin: 1rem; }
-
-.margin-xlarge {
-  margin: 4rem; }
-
 html {
   font-size: 62.5%; }
 
 /*Variables Texto*/
 h1, .h1 {
   font-size: 4rem;
-  font-weight: 800; }
+  font-weight: 500; }
 
 h2, .h2 {
   font-size: 3rem;
-  font-weight: 800; }
+  font-weight: 500; }
 
 h3, .h3 {
   font-size: 2rem;
-  font-weight: 800; }
+  font-weight: 500; }
 
 h4, .h4 {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 500;
   color: #f25c05; }
 
 p {
@@ -93,38 +71,11 @@ p {
   word-spacing: 2px;
   font-weight: 500; }
 
-/* clases fonts */
-.font-very-small {
-  font-size: 1.5rem; }
-
-.font-small {
-  font-size: 2rem; }
-
-.font-medium {
-  font-size: 3rem; }
-
-.font-big {
-  font-size: 4rem; }
-
-.font-light {
-  font-weight: 500; }
-
-.font-heavy {
-  font-weight: 800; }
-
-.textLeft {
-  text-align: left; }
-
-.textRight {
-  text-align: right; }
-
-.textCenter {
-  text-align: center; }
-
-/* Inicia NAV BOOSTRAP */
+/* NAV */
 .nav-boos {
   background-color: #f25c05;
-  padding: 1rem; }
+  padding: 1rem;
+  font-weight: 800; }
 
 .nav-boos-botones {
   display: flex;
@@ -135,10 +86,11 @@ p {
   padding-left: 3rem;
   padding-right: 3rem; }
 
-/* Cierra NAV BOOSTRAP */
+/* General */
 body {
   font-family: "Raleway", sans-serif; }
 
+/* Logo */
 .logo-marca {
   display: flex;
   flex-direction: column;
@@ -147,7 +99,8 @@ body {
   margin: 2rem; }
   .logo-marca img {
     height: 8rem;
-    object-fit: cover; }
+    object-fit: cover;
+    margin-top: 2rem; }
 
 .texto-logo {
   text-align: center;
@@ -157,12 +110,13 @@ body {
   font-size: 2.5rem;
   font-weight: 500; }
 
+/* Redes */
 .iconos-redes {
   height: 50px;
   object-fit: cover;
   margin: 0.5rem; }
 
-/* AJUSTE DE IMG CON FIT */
+/* Ajuste de IMG con Fit */
 .foto-carousel {
   height: 1000px;
   object-fit: cover; }
@@ -172,7 +126,7 @@ body {
   object-fit: cover;
   padding: 1rem; }
 
-/* INICIA GRID - FIRST */
+/* Grid */
 .body-grid {
   margin: 0;
   padding: 0;
@@ -187,7 +141,7 @@ body {
 .main-grid {
   grid-area: main; }
 
-/* Inicia Animaciones-transform-transiciones*/
+/* Animaciones-transform-transiciones */
 .skew:hover {
   transform: skewY(2deg);
   cursor: pointer;
@@ -290,14 +244,12 @@ body {
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out; } }
 
-/* Termina Animaciones-transform-transiciones*/
-/* Inicia carrusel-unico*/
+/* Inicia carrusel-unico */
 .carrusel-automatico {
   height: 99vh; }
 
-/* Termina carrusel-unico*/
-/* Formato Título y Subtítulo */
-.titulo, .sobre-mi h2, .sobre-mi .h2, .contacto-info h2, .contacto-info .h2, .contacto-seguinos h2, .contacto-seguinos .h2 {
+/* Formato Título, Subtítulo, Texto y Bordes */
+.titulo, .article-paraque h2, .article-paraque .h2, #section-disciplinas h2, #section-disciplinas .h2, .titulo-videos-disciplinas, .titulo-propuesta, .sobre-mi h2, .sobre-mi .h2, .contacto-info h2, .contacto-info .h2, .contacto-seguinos h2, .contacto-seguinos .h2 {
   text-align: center;
   margin: 4rem;
   margin-top: 6rem;
@@ -307,12 +259,12 @@ body {
   font-size: 4rem;
   font-weight: 500; }
 
-.subtitulo, .sobre-mi h3, .sobre-mi .h3, .contacto-info article p {
+.subtitulo, #section-disciplinas div article div h3, #section-disciplinas div article div .h3, #section-propuesta div article div h3, #section-propuesta div article div .h3, .sobre-mi h3, .sobre-mi .h3, .contacto-info article p, footer h4, footer .h4 {
   text-align: center;
   font-size: 3rem;
   color: #f25c05; }
 
-.texto, .sobre-mi p, #accordion-preguntas-frecuentes button {
+.texto, .article-paraque p, .section-iconos p, #section-disciplinas div article div p, #section-propuesta div article div p, .sobre-mi p, #accordion-preguntas-frecuentes button, .respuestas-acordeon, .contacto-form, footer p {
   text-align: center;
   color: #262626;
   font-size: 2rem;
@@ -321,65 +273,28 @@ body {
   word-spacing: 2px;
   font-weight: 500; }
 
-/* Inicia section-para-que (img) */
+.borde-puntos, .section-iconos, #section-disciplinas div article, #section-propuesta div article, .contacto-form, .contacto-form select, .contacto-form input, #boton-enviar {
+  border: 2px dotted #262626;
+  border-radius: 10px;
+  border-width: thin;
+  margin: 1rem; }
+
+/* HOME */
 .section-paraque {
   padding: 3rem;
   margin-top: 1rem;
   text-align: center; }
 
-.article-paraque h2, .article-paraque .h2 {
-  text-align: center;
-  color: #03588c;
-  font-size: 3rem;
-  font-weight: 800; }
-
-.article-paraque p {
-  color: #262626; }
-
-/* Inicia section-entrenate (iconos) */
 .section-iconos {
   padding: 1rem;
   margin: 2rem;
   text-align: center;
-  clear: both;
-  border: 2px dotted #262626;
-  border-radius: 10px;
-  border-width: thin; }
+  clear: both; }
   .section-iconos img {
     height: 130px;
     object-fit: cover; }
-  .section-iconos p {
-    color: #262626; }
 
 /* DISCIPLINAS */
-#section-disciplinas h2, #section-disciplinas .h2 {
-  color: #03588c;
-  text-align: center;
-  margin: 4rem;
-  margin-top: 6rem;
-  font-size: 4rem;
-  font-weight: 500; }
-
-#section-disciplinas div article {
-  border: 2px dotted #262626;
-  border-radius: 10px;
-  border-width: thin;
-  margin: 1rem; }
-  #section-disciplinas div article div h3, #section-disciplinas div article div .h3 {
-    font-size: 3rem;
-    text-align: center; }
-  #section-disciplinas div article div p {
-    text-align: center;
-    font-size: 2rem; }
-
-.titulo-videos-disciplinas {
-  color: #03588c;
-  text-align: center;
-  margin: 4rem;
-  margin-top: 6rem;
-  font-size: 4rem;
-  font-weight: 500; }
-
 .videos-disciplinas {
   padding: 1rem;
   margin: 2rem;
@@ -393,26 +308,8 @@ body {
     object-fit: cover; }
 
 /* PROPUESTA */
-.titulo-propuesta {
-  color: #03588c;
-  text-align: center;
-  margin: 4rem;
-  margin-top: 6rem;
-  font-size: 4rem;
-  font-weight: 500; }
-
 #section-propuesta div article {
-  border: 2px dotted #262626;
-  border-radius: 10px;
-  border-width: thin;
-  margin: 1rem;
   margin: 2rem 3rem; }
-  #section-propuesta div article div h3, #section-propuesta div article div .h3 {
-    font-size: 3rem;
-    text-align: center; }
-  #section-propuesta div article div p {
-    text-align: center;
-    font-size: 2rem; }
 
 .logros {
   padding: 1rem;
@@ -439,15 +336,9 @@ body {
   object-fit: cover;
   margin: 2rem; }
 
-/* Preguntas frecuentes (acordeon) */
 .respuestas-acordeon {
   color: #03588c;
-  text-align: left;
-  font-size: 2rem;
-  line-height: 2, 6rem;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  font-weight: 500; }
+  text-align: left; }
 
 /* CONTACTO */
 .contacto-seguinos article {
@@ -459,86 +350,29 @@ body {
     object-fit: cover;
     margin: 0.5rem; }
 
-/* formulario-contacto */
 .contacto-form {
   padding: 2rem;
   background-color: #f28705;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #262626;
-  border: 2px dotted #262626;
-  border-radius: 10px;
-  border-width: thin;
+  text-align: left;
   margin: 0rem 12rem !important; }
   .contacto-form label {
-    color: #262626;
-    font-size: 2rem;
-    line-height: 2, 6rem;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-weight: 500; }
+    font-size: 2rem; }
   .contacto-form select {
-    color: #262626;
-    font-size: 2rem;
-    line-height: 2, 6rem;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-weight: 500;
-    border-radius: 10px;
-    border-width: thin; }
+    font-size: 2rem; }
   .contacto-form input {
-    color: #262626;
-    font-size: 2rem;
-    line-height: 2, 6rem;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-weight: 500;
-    border-radius: 10px;
-    border-width: thin; }
+    font-size: 2rem; }
   .contacto-form textarea {
-    color: #262626;
-    font-size: 2rem;
-    line-height: 2, 6rem;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-weight: 500; }
+    font-size: 2rem; }
 
 #boton-enviar {
-  align-items: center;
-  text-align: center;
   color: #262626;
   font-size: 2rem;
-  line-height: 2, 6rem;
   letter-spacing: 1px;
-  word-spacing: 2px;
-  font-weight: 500;
   padding: 1rem 3rem 1rem 3rem;
-  border: 2px dotted #262626;
-  border-radius: 10px;
-  border-width: thin;
-  margin-left: 45rem;
   background-color: #f2eeeb; }
 
-.ejemplo-chiquito {
-  margin: 10px; }
-
-.ejemplo-mediano {
-  margin: 20px; }
-
-.ejemplo-grande {
-  margin: 30px; }
-
-.ejemplo.primero {
-  padding: 10px; }
-
-footer {
-  padding-top: 8rem /2; }
-  footer h4, footer .h4 {
-    color: #f25c05;
-    font-size: 3rem; }
-  footer p {
-    color: #f25c05;
-    font-size: 2rem; }
+footer p {
+  color: #f25c05; }
 
 .footer-boos {
   margin-top: 2rem;
@@ -554,7 +388,7 @@ footer {
   align-items: center;
   justify-content: center; }
 
-/* MEDIA QUERIES */
+/* Media Queries */
 @media only screen and (min-width: 768px) {
   header nav ul li {
     padding: 1rem 4rem; }
@@ -562,7 +396,7 @@ footer {
     justify-content: center; }
   .section-iconos {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-around; }
   .carrusel {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -1,18 +1,16 @@
 footer {
-	padding-top: 8rem /2;
 	h4 {
-		color: $textOrangeStrong;
-		font-size: $font-medium;
+		@extend .subtitulo;
 	}
 	p {
+		@extend .texto;
 		color: $textOrangeStrong;
-		font-size: $font-small;
 	}
 }
 
 .footer-boos {
 	margin-top: 2rem;
-	padding: 2rem;
+	padding: $padding-medium;
 	text-align: center;
 	background-image: linear-gradient(
 		10deg,
@@ -26,13 +24,13 @@ footer {
 		#1290ca 87.5%,
 		#0081c6 100%
 	);
-	display: flex;
+	display: $d-flex;
 	flex-direction: row;
 	justify-content: center;
 }
 
 .footer-boos-article {
-	display: flex;
+	display: $d-flex;
 	align-items: center;
 	justify-content: center;
 }

@@ -1,6 +1,10 @@
+/* General */
+
 body {
 	font-family: $fontMain;
 }
+
+/* Logo */
 
 .logo-marca {
 	display: $d-flex;
@@ -11,10 +15,11 @@ body {
 	img {
 		height: 8rem;
 		object-fit: cover;
+		margin-top: $margin-medium;
 	}
 }
 
-// mixin de sombra logotipo
+// Mixin de sombra logotipo
 // @include text-shadow(1px, 1px, 1px, color);
 @mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: $textBlacklight) {
 	text-shadow: $x $y $blur $color;
@@ -29,13 +34,15 @@ body {
 	font-weight: $font-light;
 }
 
+/* Redes */
+
 .iconos-redes {
 	height: 50px;
 	object-fit: cover;
 	margin: 0.5rem;
 }
 
-/* AJUSTE DE IMG CON FIT */
+/* Ajuste de IMG con Fit */
 
 .foto-carousel {
 	height: 1000px;
@@ -48,7 +55,7 @@ body {
 	padding: $padding-small;
 }
 
-/* INICIA GRID - FIRST */
+/* Grid */
 
 .body-grid {
 	margin: 0;
@@ -68,7 +75,7 @@ body {
 	grid-area: main;
 }
 
-/* Inicia Animaciones-transform-transiciones*/
+/* Animaciones-transform-transiciones */
 
 .skew:hover {
 	transform: skewY(2deg);
@@ -192,16 +199,13 @@ body {
 	}
 }
 
-/* Termina Animaciones-transform-transiciones*/
-
-/* Inicia carrusel-unico*/
+/* Inicia carrusel-unico */
 
 .carrusel-automatico {
 	height: 99vh;
 }
-/* Termina carrusel-unico*/
 
-/* Formato Título y Subtítulo */
+/* Formato Título, Subtítulo, Texto y Bordes */
 
 .titulo {
 	text-align: center;
@@ -230,7 +234,14 @@ body {
 	font-weight: $font-light;
 }
 
-/* Inicia section-para-que (img) */
+.borde-puntos {
+	border: 2px dotted $textBlack;
+	border-radius: 10px;
+	border-width: thin;
+	margin: $margin-small;
+}
+
+/* HOME */
 
 .section-paraque {
 	padding: $padding-large;
@@ -240,26 +251,19 @@ body {
 
 .article-paraque {
 	h2 {
-		text-align: center;
-		color: $textDarkBlue;
-		font-size: $font-medium;
-		font-weight: $font-heavy;
+		@extend .titulo;
 	}
 	p {
-		color: $textBlack;
+		@extend .texto;
 	}
 }
-
-/* Inicia section-entrenate (iconos) */
 
 .section-iconos {
 	padding: $padding-small;
 	margin: $margin-medium;
 	text-align: center;
 	clear: both;
-	border: 2px dotted $textBlack;
-	border-radius: 10px;
-	border-width: thin;
+	@extend .borde-puntos;
 
 	img {
 		height: 130px;
@@ -267,7 +271,7 @@ body {
 	}
 
 	p {
-		color: $textBlack;
+		@extend .texto;
 	}
 }
 
@@ -275,27 +279,17 @@ body {
 
 #section-disciplinas {
 	h2 {
-		color: $textDarkBlue;
-		text-align: center;
-		margin: $margin-Xlarge;
-		margin-top: 6rem;
-		font-size: $font-big;
-		font-weight: $font-light;
+		@extend .titulo;
 	}
 	div {
 		article {
-			border: 2px dotted $textBlack;
-			border-radius: 10px;
-			border-width: thin;
-			margin: $margin-small;
+			@extend .borde-puntos;
 			div {
 				h3 {
-					font-size: $font-medium;
-					text-align: center;
+					@extend .subtitulo;
 				}
 				p {
-					text-align: center;
-					font-size: $font-small;
+					@extend .texto;
 				}
 			}
 		}
@@ -303,19 +297,14 @@ body {
 }
 
 .titulo-videos-disciplinas {
-	color: $textDarkBlue;
-	text-align: center;
-	margin: $margin-Xlarge;
-	margin-top: 6rem;
-	font-size: $font-big;
-	font-weight: $font-light;
+	@extend .titulo;
 }
 
 .videos-disciplinas {
 	padding: $padding-small;
 	margin: $margin-medium;
 
-	display: flex;
+	display: $d-flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
@@ -332,30 +321,20 @@ body {
 /* PROPUESTA */
 
 .titulo-propuesta {
-	color: $textDarkBlue;
-	text-align: center;
-	margin: $margin-Xlarge;
-	margin-top: 6rem;
-	font-size: $font-big;
-	font-weight: $font-light;
+	@extend .titulo;
 }
 
 #section-propuesta {
 	div {
 		article {
-			border: 2px dotted $textBlack;
-			border-radius: 10px;
-			border-width: thin;
-			margin: $margin-small;
+			@extend .borde-puntos;
 			margin: 2rem 3rem;
 			div {
 				h3 {
-					font-size: $font-medium;
-					text-align: center;
+					@extend .subtitulo;
 				}
 				p {
-					text-align: center;
-					font-size: $font-small;
+					@extend .texto;
 				}
 			}
 		}
@@ -366,7 +345,7 @@ body {
 	padding: $padding-small;
 	margin: $margin-medium;
 
-	display: flex;
+	display: $d-flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
@@ -381,11 +360,11 @@ body {
 /* SOBRE MI */
 
 .conoce-mas {
-	display: flex;
+	display: $d-flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	margin: 3rem;
+	margin: $margin-large;
 }
 
 .img-conoce-mas {
@@ -406,7 +385,7 @@ body {
 	}
 }
 
-/* Preguntas frecuentes (acordeon) */
+// Preguntas frecuentes (acordeon)
 
 #accordion-preguntas-frecuentes {
 	button {
@@ -415,13 +394,9 @@ body {
 }
 
 .respuestas-acordeon {
+	@extend .texto;
 	color: $textDarkBlue;
 	text-align: left;
-	font-size: $font-small;
-	line-height: 2, 6rem;
-	letter-spacing: 1px;
-	word-spacing: 2px;
-	font-weight: $font-light;
 }
 
 /* CONTACTO */
@@ -442,7 +417,7 @@ body {
 		@extend .titulo;
 	}
 	article {
-		display: flex;
+		display: $d-flex;
 		justify-content: center;
 		align-items: center;
 		a {
@@ -455,87 +430,39 @@ body {
 	}
 }
 
-/* formulario-contacto */
+// Formulario-contacto
 
 .contacto-form {
 	padding: $padding-medium;
 	background-color: $textOrangeLight;
-	font-size: $font-small;
-	font-weight: $font-light;
-	color: $textBlack;
-	border: 2px dotted $textBlack;
-	border-radius: 10px;
-	border-width: thin;
+	@extend .borde-puntos;
+	@extend .texto;
+	text-align: left;
 	margin: 0rem 12rem !important;
 
 	label {
-		color: $textBlack;
 		font-size: $font-small;
-		line-height: 2, 6rem;
-		letter-spacing: 1px;
-		word-spacing: 2px;
-		font-weight: $font-light;
 	}
 
 	select {
-		color: $textBlack;
 		font-size: $font-small;
-		line-height: 2, 6rem;
-		letter-spacing: 1px;
-		word-spacing: 2px;
-		font-weight: $font-light;
-		border-radius: 10px;
-		border-width: thin;
+		@extend .borde-puntos;
 	}
 
 	input {
-		color: $textBlack;
 		font-size: $font-small;
-		line-height: 2, 6rem;
-		letter-spacing: 1px;
-		word-spacing: 2px;
-		font-weight: $font-light;
-		border-radius: 10px;
-		border-width: thin;
+		@extend .borde-puntos;
 	}
 	textarea {
-		color: $textBlack;
 		font-size: $font-small;
-		line-height: 2, 6rem;
-		letter-spacing: 1px;
-		word-spacing: 2px;
-		font-weight: $font-light;
 	}
 }
 
 #boton-enviar {
-	align-items: center;
-	text-align: center;
 	color: $textBlack;
 	font-size: $font-small;
-	line-height: 2, 6rem;
 	letter-spacing: 1px;
-	word-spacing: 2px;
-	font-weight: $font-light;
 	padding: 1rem 3rem 1rem 3rem;
-	border: 2px dotted $textBlack;
-	border-radius: 10px;
-	border-width: thin;
-	margin-left: 45rem;
+	@extend .borde-puntos;
 	background-color: $textGreyWaight;
-}
-
-.ejemplo {
-	&-chiquito {
-		margin: 10px;
-	}
-	&-mediano {
-		margin: 20px;
-	}
-	&-grande {
-		margin: 30px;
-	}
-	&.primero {
-		padding: 10px;
-	}
 }

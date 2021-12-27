@@ -1,4 +1,4 @@
-/* MEDIA QUERIES */
+/* Media Queries */
 
 @media only screen and (min-width: 768px) {
 	header nav ul li {
@@ -10,8 +10,8 @@
 	}
 
 	.section-iconos {
-		display: flex;
-		justify-content: space-between;
+		display: $d-flex;
+		justify-content: space-around;
 	}
 
 	.carrusel {
@@ -22,7 +22,7 @@
 	}
 
 	.footer-grid {
-		display: flex;
+		display: $d-flex;
 		flex-direction: row;
 		justify-content: space-between;
 	}
