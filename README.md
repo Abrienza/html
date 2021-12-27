@@ -4,6 +4,17 @@
 
 Este es un proyecto personal enfocado en el aprendizaje de html, css, sass, etc.
 
+
+## Documentación
+
+* Wireframes links a wireframe.cc: 
+  * [index.html](https://wireframe.cc/HL1HxD)
+  * [disciplina.html](https://wireframe.cc/NFRBC1)
+  * [propuesta.html](https://wireframe.cc/ouGXET)
+  * [sobre_mi.html](https://wireframe.cc/rbU3Av)
+  * [contacto.html](https://wireframe.cc/Wq9K47)
+
+
 ## Requisitos
 
 - Node version >=10
