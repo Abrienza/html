@@ -1,8 +1,6 @@
-
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 768px) {
-
 	header nav ul li {
 		padding: 1rem 4rem;
 	}
@@ -18,8 +16,8 @@
 
 	.carrusel {
 		display: grid;
-		grid-template-columns: 1fr 1fr; 
-		grid-template-rows: 1fr 1fr; 
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
 		gap: 0rem 1rem;
 	}
 
@@ -30,30 +28,22 @@
 	}
 }
 
-
 @media only screen and (min-width: 1200px) {
-
 	.logros {
-		display: flex;
 		flex-direction: row;
-		overflow-x: auto;
-		max-width: 99vw;
 		justify-content: space-around;
 	}
 
 	.videos-disciplinas {
-		justify-content: space-around;
 		flex-direction: row;
+		justify-content: space-around;
 
 		article {
 			iframe {
 				height: 150px;
-				width: auto;
+				width: 270px;
 				object-fit: cover;
 			}
 		}
 	}
 }
-
-
-

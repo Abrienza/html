@@ -16,28 +16,28 @@
   color: #595959; }
 
 .textGreyStrong {
-  color: #8C8C8C; }
+  color: #8c8c8c; }
 
 .textGreyLight {
-  color: #BFBFBF; }
+  color: #bfbfbf; }
 
 .textGreyWaight {
-  color: #F2EEEB; }
+  color: #f2eeeb; }
 
 .textDarkBlue {
-  color: #03588C; }
+  color: #03588c; }
 
 .textMediumBlue {
-  color: #0378A6; }
+  color: #0378a6; }
 
 .textLightBlue {
-  color: #8FC4D9; }
+  color: #8fc4d9; }
 
 .textOrangeLight {
-  color: #F28705; }
+  color: #f28705; }
 
 .textOrangeStrong {
-  color: #F25C05; }
+  color: #f25c05; }
 
 /*Variables Padding y Margin*/
 /*Fotos Section Disciplina*/
@@ -83,12 +83,12 @@ h3, .h3 {
 h4, .h4 {
   font-size: 3rem;
   font-weight: 800;
-  color: #F25C05; }
+  color: #f25c05; }
 
 p {
   color: #262626;
   font-size: 2rem;
-  line-height: 2,6rem;
+  line-height: 2, 6rem;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 500; }
@@ -123,7 +123,7 @@ p {
 
 /* Inicia NAV BOOSTRAP */
 .nav-boos {
-  background-color: #F25C05;
+  background-color: #f25c05;
   padding: 1rem; }
 
 .nav-boos-botones {
@@ -301,7 +301,7 @@ body {
   text-align: center;
   margin: 4rem;
   margin-top: 6rem;
-  color: #03588C;
+  color: #03588c;
   font-size: 3rem;
   font-weight: 800;
   font-size: 4rem;
@@ -310,13 +310,13 @@ body {
 .subtitulo, .sobre-mi h3, .sobre-mi .h3, .contacto-info article p {
   text-align: center;
   font-size: 3rem;
-  color: #F25C05; }
+  color: #f25c05; }
 
 .texto, .sobre-mi p, #accordionPreguntasFrecuentes button {
   text-align: center;
   color: #262626;
   font-size: 2rem;
-  line-height: 2,6rem;
+  line-height: 2, 6rem;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 500; }
@@ -329,7 +329,7 @@ body {
 
 #articleParaque h2, #articleParaque .h2 {
   text-align: center;
-  color: #03588C;
+  color: #03588c;
   font-size: 3rem;
   font-weight: 800; }
 
@@ -353,7 +353,7 @@ body {
 
 /* DISCIPLINAS */
 #sectionDisciplinas h2, #sectionDisciplinas .h2 {
-  color: #03588C;
+  color: #03588c;
   text-align: center;
   margin: 4rem;
   margin-top: 6rem;
@@ -373,7 +373,7 @@ body {
     font-size: 2rem; }
 
 .titulo-videos-disciplinas {
-  color: #03588C;
+  color: #03588c;
   text-align: center;
   margin: 4rem;
   margin-top: 6rem;
@@ -383,7 +383,6 @@ body {
 .videos-disciplinas {
   padding: 1rem;
   margin: 2rem;
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -395,7 +394,7 @@ body {
 
 /* PROPUESTA */
 .tituloPropuesta {
-  color: #03588C;
+  color: #03588c;
   text-align: center;
   margin: 4rem;
   margin-top: 6rem;
@@ -415,12 +414,14 @@ body {
     text-align: center;
     font-size: 2rem; }
 
-#sectionLogros {
+.logros {
   padding: 1rem;
   margin: 2rem;
-  text-align: center;
-  clear: both; }
-  #sectionLogros img {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .logros img {
     height: 300px;
     object-fit: cover;
     margin: 2rem; }
@@ -438,10 +439,10 @@ body {
 
 /* Preguntas frecuentes (acordeon) */
 .respuestas-acordeon {
-  color: #03588C;
+  color: #03588c;
   text-align: left;
   font-size: 2rem;
-  line-height: 2,6rem;
+  line-height: 2, 6rem;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 500; }
@@ -459,7 +460,7 @@ body {
 /* formulario-contacto */
 .contacto-form {
   padding: 2rem;
-  background-color: #F28705;
+  background-color: #f28705;
   font-size: 2rem;
   font-weight: 500;
   color: #262626;
@@ -470,14 +471,14 @@ body {
   .contacto-form label {
     color: #262626;
     font-size: 2rem;
-    line-height: 2,6rem;
+    line-height: 2, 6rem;
     letter-spacing: 1px;
     word-spacing: 2px;
     font-weight: 500; }
   .contacto-form select {
     color: #262626;
     font-size: 2rem;
-    line-height: 2,6rem;
+    line-height: 2, 6rem;
     letter-spacing: 1px;
     word-spacing: 2px;
     font-weight: 500;
@@ -486,7 +487,7 @@ body {
   .contacto-form input {
     color: #262626;
     font-size: 2rem;
-    line-height: 2,6rem;
+    line-height: 2, 6rem;
     letter-spacing: 1px;
     word-spacing: 2px;
     font-weight: 500;
@@ -495,7 +496,7 @@ body {
   .contacto-form textarea {
     color: #262626;
     font-size: 2rem;
-    line-height: 2,6rem;
+    line-height: 2, 6rem;
     letter-spacing: 1px;
     word-spacing: 2px;
     font-weight: 500; }
@@ -505,7 +506,7 @@ body {
   text-align: center;
   color: #262626;
   font-size: 2rem;
-  line-height: 2,6rem;
+  line-height: 2, 6rem;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 500;
@@ -514,7 +515,7 @@ body {
   border-radius: 10px;
   border-width: thin;
   margin-left: 45rem;
-  background-color: #F2EEEB; }
+  background-color: #f2eeeb; }
 
 .ejemplo-chiquito {
   margin: 10px; }
@@ -531,10 +532,10 @@ body {
 footer {
   padding-top: 8rem /2; }
   footer h4, footer .h4 {
-    color: #F25C05;
+    color: #f25c05;
     font-size: 3rem; }
   footer p {
-    color: #F25C05;
+    color: #f25c05;
     font-size: 2rem; }
 
 .footer-boos {
@@ -572,17 +573,14 @@ footer {
 
 @media only screen and (min-width: 1200px) {
   .logros {
-    display: flex;
     flex-direction: row;
-    overflow-x: auto;
-    max-width: 99vw;
     justify-content: space-around; }
   .videos-disciplinas {
-    justify-content: space-around;
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: space-around; }
     .videos-disciplinas article iframe {
       height: 150px;
-      width: auto;
+      width: 270px;
       object-fit: cover; } }
 
 /*!
@@ -594,14 +592,14 @@ footer {
 :root {
   --bs-textBlack: #262626;
   --bs-textBlacklight: #595959;
-  --bs-textGreyStrong: #8C8C8C;
-  --bs-textGreyLight: #BFBFBF;
-  --bs-textGreyWaight: #F2EEEB;
-  --bs-textDarkBlue: #03588C;
-  --bs-textMediumBlue: #0378A6;
-  --bs-textLightBlue: #8FC4D9;
-  --bs-textOrangeLight: #F28705;
-  --bs-textOrangeStrong: #F25C05;
+  --bs-textGreyStrong: #8c8c8c;
+  --bs-textGreyLight: #bfbfbf;
+  --bs-textGreyWaight: #f2eeeb;
+  --bs-textDarkBlue: #03588c;
+  --bs-textMediumBlue: #0378a6;
+  --bs-textLightBlue: #8fc4d9;
+  --bs-textOrangeLight: #f28705;
+  --bs-textOrangeStrong: #f25c05;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;

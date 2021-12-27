@@ -3,11 +3,11 @@ body {
 }
 
 .logo-marca {
-		display: $d-flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin: $margin-medium;
+	display: $d-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: $margin-medium;
 	img {
 		height: 8rem;
 		object-fit: cover;
@@ -16,39 +16,37 @@ body {
 
 // mixin de sombra logotipo
 // @include text-shadow(1px, 1px, 1px, color);
-@mixin text-shadow($x:2px,$y: 2px,$blur:5px,$color: $textBlacklight){
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: $textBlacklight) {
 	text-shadow: $x $y $blur $color;
 }
 
 .texto-logo {
-	text-align: center; 
+	text-align: center;
 	color: $textBlacklight;
-	@include text-shadow(2px,2px);
+	@include text-shadow(2px, 2px);
 	margin: $margin-small;
 	font-size: $font-small-medium;
 	font-weight: $font-light;
 }
 
-.iconos-redes
-	{
-		height: 50px;
-		object-fit: cover;
-		margin: 0.5rem
-	}
+.iconos-redes {
+	height: 50px;
+	object-fit: cover;
+	margin: 0.5rem;
+}
 
 /* AJUSTE DE IMG CON FIT */
 
-.foto-carousel{
+.foto-carousel {
 	height: 1000px;
 	object-fit: cover;
 }
 
-.foto-disciplinas{
+.foto-disciplinas {
 	height: 270px;
 	object-fit: cover;
 	padding: $padding-small;
 }
-
 
 /* INICIA GRID - FIRST */
 
@@ -72,13 +70,13 @@ body {
 
 /* Inicia Animaciones-transform-transiciones*/
 
-.skew:hover{
-	transform:skewY(2deg);
+.skew:hover {
+	transform: skewY(2deg);
 	cursor: pointer;
 	transition: transform 1s;
 }
 
-.transform:hover{
+.transform:hover {
 	transform: translateY(-5px);
 	cursor: pointer;
 	transition: transform 2s;
@@ -86,120 +84,120 @@ body {
 
 .bounce-in-top {
 	-webkit-animation: bounce-in-top 1.1s both;
-	        animation: bounce-in-top 1.1s both;
+	animation: bounce-in-top 1.1s both;
 }
 
- @-webkit-keyframes bounce-in-top {
+@-webkit-keyframes bounce-in-top {
 	0% {
-	  -webkit-transform: translateY(-500px);
-			  transform: translateY(-500px);
-	  -webkit-animation-timing-function: ease-in;
-			  animation-timing-function: ease-in;
-	  opacity: 0;
+		-webkit-transform: translateY(-500px);
+		transform: translateY(-500px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+		opacity: 0;
 	}
 	38% {
-	  -webkit-transform: translateY(0);
-			  transform: translateY(0);
-	  -webkit-animation-timing-function: ease-out;
-			  animation-timing-function: ease-out;
-	  opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+		opacity: 1;
 	}
 	55% {
-	  -webkit-transform: translateY(-65px);
-			  transform: translateY(-65px);
-	  -webkit-animation-timing-function: ease-in;
-			  animation-timing-function: ease-in;
+		-webkit-transform: translateY(-65px);
+		transform: translateY(-65px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
 	}
 	72% {
-	  -webkit-transform: translateY(0);
-			  transform: translateY(0);
-	  -webkit-animation-timing-function: ease-out;
-			  animation-timing-function: ease-out;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
 	}
 	81% {
-	  -webkit-transform: translateY(-28px);
-			  transform: translateY(-28px);
-	  -webkit-animation-timing-function: ease-in;
-			  animation-timing-function: ease-in;
+		-webkit-transform: translateY(-28px);
+		transform: translateY(-28px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
 	}
 	90% {
-	  -webkit-transform: translateY(0);
-			  transform: translateY(0);
-	  -webkit-animation-timing-function: ease-out;
-			  animation-timing-function: ease-out;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
 	}
 	95% {
-	  -webkit-transform: translateY(-8px);
-			  transform: translateY(-8px);
-	  -webkit-animation-timing-function: ease-in;
-			  animation-timing-function: ease-in;
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
 	}
 	100% {
-	  -webkit-transform: translateY(0);
-			  transform: translateY(0);
-	  -webkit-animation-timing-function: ease-out;
-			  animation-timing-function: ease-out;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
 	}
-  }
-  @keyframes bounce-in-top {
+}
+@keyframes bounce-in-top {
 	0% {
-	  -webkit-transform: translateY(-500px);
-			  transform: translateY(-500px);
-	  -webkit-animation-timing-function: ease-in;
-			  animation-timing-function: ease-in;
-	  opacity: 0;
+		-webkit-transform: translateY(-500px);
+		transform: translateY(-500px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+		opacity: 0;
 	}
 	38% {
-	  -webkit-transform: translateY(0);
-			  transform: translateY(0);
-	  -webkit-animation-timing-function: ease-out;
-			  animation-timing-function: ease-out;
-	  opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+		opacity: 1;
 	}
 	55% {
-	  -webkit-transform: translateY(-65px);
-			  transform: translateY(-65px);
-	  -webkit-animation-timing-function: ease-in;
-			  animation-timing-function: ease-in;
+		-webkit-transform: translateY(-65px);
+		transform: translateY(-65px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
 	}
 	72% {
-	  -webkit-transform: translateY(0);
-			  transform: translateY(0);
-	  -webkit-animation-timing-function: ease-out;
-			  animation-timing-function: ease-out;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
 	}
 	81% {
-	  -webkit-transform: translateY(-28px);
-			  transform: translateY(-28px);
-	  -webkit-animation-timing-function: ease-in;
-			  animation-timing-function: ease-in;
+		-webkit-transform: translateY(-28px);
+		transform: translateY(-28px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
 	}
 	90% {
-	  -webkit-transform: translateY(0);
-			  transform: translateY(0);
-	  -webkit-animation-timing-function: ease-out;
-			  animation-timing-function: ease-out;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
 	}
 	95% {
-	  -webkit-transform: translateY(-8px);
-			  transform: translateY(-8px);
-	  -webkit-animation-timing-function: ease-in;
-			  animation-timing-function: ease-in;
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
 	}
 	100% {
-	  -webkit-transform: translateY(0);
-			  transform: translateY(0);
-	  -webkit-animation-timing-function: ease-out;
-			  animation-timing-function: ease-out;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
 	}
-  }
-  
+}
+
 /* Termina Animaciones-transform-transiciones*/
 
 /* Inicia carrusel-unico*/
 
 .carrusel-automatico {
-					height: 99vh;
+	height: 99vh;
 }
 /* Termina carrusel-unico*/
 
@@ -226,105 +224,102 @@ body {
 	text-align: $textCenter;
 	color: $textBlack;
 	font-size: $font-small;
-	line-height: 2,6rem;
+	line-height: 2, 6rem;
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	font-weight: $font-light;
 }
 
-
 /* Inicia section-para-que (img) */
 
 #sectionParaque {
-				padding: $padding-large;
-    			margin-top: $margin-small;
-    			text-align: $textCenter;
+	padding: $padding-large;
+	margin-top: $margin-small;
+	text-align: $textCenter;
 }
 
-#articleParaque {		
-				h2 {
-					text-align: $textCenter;
-					color: $textDarkBlue;
-					font-size: $font-medium;
-					font-weight: $font-heavy;
-				}
-				p {
-					color: $textBlack;
-				}
+#articleParaque {
+	h2 {
+		text-align: $textCenter;
+		color: $textDarkBlue;
+		font-size: $font-medium;
+		font-weight: $font-heavy;
+	}
+	p {
+		color: $textBlack;
+	}
 }
 
 /* Inicia section-entrenate (iconos) */
 
-#sectionIconos {	
+#sectionIconos {
 	padding: $padding-small;
-    margin: $margin-medium;
-    text-align: $textCenter;
-    clear: both;
-    border: 2px dotted $textBlack;
-    border-radius: 10px;
+	margin: $margin-medium;
+	text-align: $textCenter;
+	clear: both;
+	border: 2px dotted $textBlack;
+	border-radius: 10px;
 	border-width: thin;
 
-	img { 
+	img {
 		height: 130px;
 		object-fit: cover;
 	}
 
 	p {
-		color: $textBlack
+		color: $textBlack;
 	}
 }
 
 /* DISCIPLINAS */
 
-#sectionDisciplinas{
+#sectionDisciplinas {
 	h2 {
 		color: $textDarkBlue;
 		text-align: $textCenter;
 		margin: $margin-Xlarge;
 		margin-top: 6rem;
 		font-size: $font-big;
-		font-weight: $font-light
+		font-weight: $font-light;
 	}
 
 	div {
-			article {
-				border: 2px dotted $textBlack;
-				border-radius: 10px;
-				border-width: thin;
-				margin: $margin-small;
-					div {
-						
-							h3 {
-								font-size: $font-medium;
-								text-align: $textCenter;
-							}
-							p {
-								text-align: $textCenter;
-								font-size: $font-small;
-							}
-					}
+		article {
+			border: 2px dotted $textBlack;
+			border-radius: 10px;
+			border-width: thin;
+			margin: $margin-small;
+			div {
+				h3 {
+					font-size: $font-medium;
+					text-align: $textCenter;
+				}
+				p {
+					text-align: $textCenter;
+					font-size: $font-small;
+				}
 			}
+		}
 	}
 }
 
 .titulo-videos-disciplinas {
-		color: $textDarkBlue;
-		text-align: $textCenter;
-		margin: $margin-Xlarge;
-		margin-top: 6rem;
-		font-size: $font-big;
-		font-weight: $font-light
+	color: $textDarkBlue;
+	text-align: $textCenter;
+	margin: $margin-Xlarge;
+	margin-top: 6rem;
+	font-size: $font-big;
+	font-weight: $font-light;
 }
 
 .videos-disciplinas {
 	padding: $padding-small;
-    margin: $margin-medium;
-	margin-top: 1rem;
-	
+	margin: $margin-medium;
+
 	display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;	
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 
 	article {
 		iframe {
@@ -337,46 +332,47 @@ body {
 
 /* PROPUESTA */
 
-.tituloPropuesta { 	
+.tituloPropuesta {
 	color: $textDarkBlue;
 	text-align: $textCenter;
 	margin: $margin-Xlarge;
 	margin-top: 6rem;
 	font-size: $font-big;
-	font-weight: $font-light	
+	font-weight: $font-light;
 }
 
 #sectionPropuesta {
-					div {
-						
-						article {
-							border: 2px dotted $textBlack;
-							border-radius: 10px;
-							border-width: thin;
-							margin: $margin-small;
-							margin: 2rem 3rem;
-									div {
-										
-											h3 {
-												font-size: $font-medium;
-												text-align: $textCenter;
-											}
-											p {
-												text-align: $textCenter;
-												font-size: $font-small;
-											}
-									}
-						}
-					}
+	div {
+		article {
+			border: 2px dotted $textBlack;
+			border-radius: 10px;
+			border-width: thin;
+			margin: $margin-small;
+			margin: 2rem 3rem;
+			div {
+				h3 {
+					font-size: $font-medium;
+					text-align: $textCenter;
+				}
+				p {
+					text-align: $textCenter;
+					font-size: $font-small;
+				}
+			}
+		}
+	}
 }
 
-#sectionLogros {	
+.logros {
 	padding: $padding-small;
-    margin: $margin-medium;
-    text-align: $textCenter;
-    clear: both;
+	margin: $margin-medium;
 
-	img { 
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	img {
 		height: 300px;
 		object-fit: cover;
 		margin: $margin-medium;
@@ -388,7 +384,7 @@ body {
 .info-link-insta-conoce-mas {
 	display: flex;
 	justify-content: space-around;
-	margin: 3rem
+	margin: 3rem;
 }
 
 .img-conoce-mas {
@@ -421,11 +417,10 @@ body {
 	color: $textDarkBlue;
 	text-align: $textLeft;
 	font-size: $font-small;
-	line-height: 2,6rem;
+	line-height: 2, 6rem;
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	font-weight: $font-light;
-
 }
 
 /* CONTACTO */
@@ -449,13 +444,13 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-			a {
-				img {
-					height: 50px;
-					object-fit: cover;
-					margin: 0.5rem
-				}
+		a {
+			img {
+				height: 50px;
+				object-fit: cover;
+				margin: 0.5rem;
 			}
+		}
 	}
 }
 
@@ -468,14 +463,14 @@ body {
 	font-weight: $font-light;
 	color: $textBlack;
 	border: 2px dotted $textBlack;
-    border-radius: 10px;
+	border-radius: 10px;
 	border-width: thin;
 	margin: 0rem 12rem !important;
 
 	label {
 		color: $textBlack;
 		font-size: $font-small;
-		line-height: 2,6rem;
+		line-height: 2, 6rem;
 		letter-spacing: 1px;
 		word-spacing: 2px;
 		font-weight: $font-light;
@@ -484,7 +479,7 @@ body {
 	select {
 		color: $textBlack;
 		font-size: $font-small;
-		line-height: 2,6rem;
+		line-height: 2, 6rem;
 		letter-spacing: 1px;
 		word-spacing: 2px;
 		font-weight: $font-light;
@@ -495,7 +490,7 @@ body {
 	input {
 		color: $textBlack;
 		font-size: $font-small;
-		line-height: 2,6rem;
+		line-height: 2, 6rem;
 		letter-spacing: 1px;
 		word-spacing: 2px;
 		font-weight: $font-light;
@@ -505,7 +500,7 @@ body {
 	textarea {
 		color: $textBlack;
 		font-size: $font-small;
-		line-height: 2,6rem;
+		line-height: 2, 6rem;
 		letter-spacing: 1px;
 		word-spacing: 2px;
 		font-weight: $font-light;
@@ -517,17 +512,16 @@ body {
 	text-align: $textCenter;
 	color: $textBlack;
 	font-size: $font-small;
-	line-height: 2,6rem;
+	line-height: 2, 6rem;
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	font-weight: $font-light;
 	padding: 1rem 3rem 1rem 3rem;
 	border: 2px dotted $textBlack;
-    border-radius: 10px;
+	border-radius: 10px;
 	border-width: thin;
 	margin-left: 45rem;
 	background-color: $textGreyWaight;
-
 }
 
 .ejemplo {
