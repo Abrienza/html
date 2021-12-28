@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap");
 
-$fontMain: 'Raleway', sans-serif;
+$fontMain: "Raleway", sans-serif;
 
 html {
 	font-size: 62.5%;
@@ -8,85 +8,45 @@ html {
 
 /*Variables Texto*/
 
-//font size
+// Font size
 $font-very-small: 1.5rem;
 $font-small: 2rem;
+$font-small-medium: 2.5rem;
 $font-medium: 3rem;
 $font-big: 4rem;
 
-//font weight
+// Font weight
 $font-light: 500;
 $font-heavy: 800;
 
-//text align
-$textLeft: left;
-$textRight: right;
-$textCenter: center;
+// Etiquetas
 
 h1 {
-	font-size: 4rem;
-	font-weight: 800
+	font-size: $font-big;
+	font-weight: $font-light;
 }
 
 h2 {
-	font-size: 3rem;
-	font-weight: 800;
+	font-size: $font-medium;
+	font-weight: $font-light;
 }
 
 h3 {
-	font-size: 2rem;
-	font-weight: 800;
+	font-size: $font-small;
+	font-weight: $font-light;
 }
 
 h4 {
-	font-size: 3rem;
-	font-weight:800;
-	color: #F25C05;
+	font-size: $font-medium;
+	font-weight: $font-light;
+	color: $textOrangeStrong;
 }
 
 p {
-	color: #262626;
-	font-size: 2rem;
-	line-height: 2,6rem;
+	color: $textBlack;
+	font-size: $font-small;
+	line-height: 2.6rem;
 	letter-spacing: 1px;
 	word-spacing: 2px;
-	font-weight: 500;
-}
-
-/* clases fonts */
-
-.font-very-small {
-	font-size: 1.5rem;
-}
-
-.font-small {
-	font-size: 2rem;
-}
-
-.font-medium {
-	font-size: 3rem;
-}
-
-.font-big {
-	font-size: 4rem;
-}
-
-.font-light {
-	font-weight: 500;
-}
-
-.font-heavy {
-	font-weight: 800;
-}
-
-.textLeft {
-	text-align: left;
-}
-
-.textRight {
-	text-align: right;
-}
-
-.textCenter {
-	text-align: center;
+	font-weight: $font-light;
 }

@@ -1,42 +1,36 @@
 footer {
-	background-color: $textGreyLight;
-	padding-top: 8rem /2;
-		h4{
-			color: $textOrangeStrong;
-			font-size: $font-medium;
-		}
-		p{
-			color: $textOrangeStrong;
-			font-size: $font-small
-		}
-}
-
-#footerlogo{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.footer-grid {
-	margin-top: 1rem;
-	padding: 2rem;
-	text-align: center;
-	grid-area: footer;
-	background-image: linear-gradient(10deg, #ffffff 0, #f3f4f4 12.5%, #d5e6ea 25%, #b3d6e1 37.5%, #8fc4d9 50%, #6ab2d3 62.5%, #44a0ce 75%, #1290ca 87.5%, #0081c6 100%);
+	h4 {
+		@extend .subtitulo;
+	}
+	p {
+		@extend .texto;
+		color: $textOrangeStrong;
+	}
 }
 
 .footer-boos {
-	margin-top: 1rem;
-	padding: 2rem;
+	margin-top: 2rem;
+	padding: $padding-medium;
 	text-align: center;
-	background-image: linear-gradient(10deg, #ffffff 0, #f3f4f4 12.5%, #d5e6ea 25%, #b3d6e1 37.5%, #8fc4d9 50%, #6ab2d3 62.5%, #44a0ce 75%, #1290ca 87.5%, #0081c6 100%);
-	display: flex;
+	background-image: linear-gradient(
+		10deg,
+		#ffffff 0,
+		#f3f4f4 12.5%,
+		#d5e6ea 25%,
+		#b3d6e1 37.5%,
+		#8fc4d9 50%,
+		#6ab2d3 62.5%,
+		#44a0ce 75%,
+		#1290ca 87.5%,
+		#0081c6 100%
+	);
+	display: $d-flex;
 	flex-direction: row;
-	justify-content:center;
-	}
+	justify-content: center;
+}
 
 .footer-boos-article {
-	display: flex;
+	display: $d-flex;
 	align-items: center;
 	justify-content: center;
 }

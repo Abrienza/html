@@ -1,18 +1,18 @@
-/* Inicia NAV BOOSTRAP */
+/* NAV */
 
-.nav-boos{
-	background-color:#F25C05;
-	padding: 1rem;
+.nav-boos {
+	background-color: $textOrangeStrong;
+	padding: $padding-small;
+	font-weight: $font-heavy;
 }
 
-.nav-boos-botones{
-	display: flex;
+.nav-boos-botones {
+	display: $d-flex;
 	align-content: center;
 	justify-content: center;
 }
 
-.nav-boos-botones-unidad{
+.nav-boos-botones-unidad {
 	padding-left: 3rem;
 	padding-right: 3rem;
 }
-/* Cierra NAV BOOSTRAP */

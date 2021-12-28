@@ -1,10 +1,10 @@
 /* Variables Generales */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap");
 
-$fontMain: 'Raleway', sans-serif;
+$fontMain: "Raleway", sans-serif;
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 	color: #262626;
@@ -13,22 +13,24 @@ $fontMain: 'Raleway', sans-serif;
 
 /* Paleta de Colores*/
 
-// Definimos las variables de colores para asignarlas consistentemente.
-$textBlack: #262626;
-$textBlacklight:  #595959;
-$textGreyStrong:  #8C8C8C;
-$textGreyLight:  #BFBFBF;
-$textGreyWaight:  #F2EEEB;
-$textDarkBlue:  #03588C;
-$textMediumBlue:  #0378A6;
-$textLightBlue:  #8FC4D9;
-$textOrangeLight:  #F28705;
-$textOrangeStrong:  #F25C05;
+// Defino las variables de colores para asignarlas consistentemente.
 
-// Creamos una lista de mapas para poder iterar y generar las clases.
-$colors:(
-	textBlack: $textBlack, 
-	textBlacklight: $textBlacklight, 
+$textBlack: #262626;
+$textBlacklight: #595959;
+$textGreyStrong: #8c8c8c;
+$textGreyLight: #bfbfbf;
+$textGreyWaight: #f2eeeb;
+$textDarkBlue: #03588c;
+$textMediumBlue: #0378a6;
+$textLightBlue: #8fc4d9;
+$textOrangeLight: #f28705;
+$textOrangeStrong: #f25c05;
+
+// Creé una lista de mapas para poder iterar y generar las clases.
+
+$colors: (
+	textBlack: $textBlack,
+	textBlacklight: $textBlacklight,
 	textGreyStrong: $textGreyStrong,
 	textGreyLight: $textGreyLight,
 	textGreyWaight: $textGreyWaight,
@@ -39,65 +41,39 @@ $colors:(
 	textOrangeStrong: $textOrangeStrong,
 );
 
-// Iteramos sobre el mapa de colores para generar las clases
+// Itero sobre el mapa de colores para generar las clases.
 
-//bucle que trae los valores del map
-@each $name-color, $color in $colors{
-	.#{$name-color}{
+// Bucle que trae los valores del map.
+
+@each $name-color, $color in $colors {
+	.#{$name-color} {
 		color: $color;
 	}
 }
 
-//Gradiente
+/* Gradiente */
 
-$gradient: linear-gradient(175deg, #ffd14a 0, #ffbf3e 16.67%, #ffa729 33.33%, #f28705 50%, #e46500 66.67%, #dc4700 83.33%, #d92800 100%);
+$gradient: linear-gradient(
+	175deg,
+	#ffd14a 0,
+	#ffbf3e 16.67%,
+	#ffa729 33.33%,
+	#f28705 50%,
+	#e46500 66.67%,
+	#dc4700 83.33%,
+	#d92800 100%
+);
 
-/*Variables Padding y Margin*/
+/* Variables Padding y Margin */
 
-$padding-very-small:0,5rem;
 $padding-small: 1rem;
 $padding-medium: 2rem;
 $padding-large: 3rem;
-$margin-very-small:0,5rem;
 $margin-small: 1rem;
 $margin-medium: 2rem;
 $margin-large: 3rem;
-
-/*Fotos Section Disciplina*/
-
-#foto-running{
-	height: 31%;
-}
+$margin-Xlarge: 4rem;
 
 /* Display */
-$d-flex:flex;
 
-/* Clases Margin y Padding */
-
-.padding-small {
-	padding: 1rem;
-}
-
-.padding-medium {
-	padding: 2rem;
-}
-
-.padding-large {
-	padding: 3rem;
-}
-
-.margin-small {
-	margin: 1rem;
-}
-
-.margin-medium {
-	margin: 1rem;
-}
-
-.margin-large {
-	margin: 1rem;
-}
-
-.margin-xlarge {
-	margin: 4rem;
-}
+$d-flex: flex;
