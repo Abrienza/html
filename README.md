@@ -14,6 +14,10 @@ Este es un proyecto personal enfocado en el aprendizaje de html, css, sass, etc.
   * [sobre_mi.html](https://wireframe.cc/rbU3Av)
   * [contacto.html](https://wireframe.cc/Wq9K47)
 
+# Otros links
+
+* [GitHub Pages](https://abrienza.github.io/html/)
+* [Public Host en 000webhostapp.com](https://formadordedeportistas.000webhostapp.com/)
 
 ## Requisitos
 
