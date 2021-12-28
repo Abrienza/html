@@ -228,7 +228,7 @@ body {
 	text-align: center;
 	color: $textBlack;
 	font-size: $font-small;
-	line-height: 2, 6rem;
+	line-height: 2.6rem;
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	font-weight: $font-light;
@@ -390,6 +390,7 @@ body {
 #accordion-preguntas-frecuentes {
 	button {
 		@extend .texto;
+		text-align: left;
 	}
 }
 

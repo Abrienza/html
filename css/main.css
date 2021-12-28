@@ -66,7 +66,7 @@ h4, .h4 {
 p {
   color: #262626;
   font-size: 2rem;
-  line-height: 2, 6rem;
+  line-height: 2.6rem;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 500; }
@@ -268,7 +268,7 @@ body {
   text-align: center;
   color: #262626;
   font-size: 2rem;
-  line-height: 2, 6rem;
+  line-height: 2.6rem;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 500; }
@@ -335,6 +335,9 @@ body {
   height: 300px;
   object-fit: cover;
   margin: 2rem; }
+
+#accordion-preguntas-frecuentes button {
+  text-align: left; }
 
 .respuestas-acordeon {
   color: #03588c;
