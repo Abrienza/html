@@ -374,6 +374,13 @@ body {
   padding: 1rem 3rem 1rem 3rem;
   background-color: #f2eeeb; }
 
+.botonJs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem; }
+
 footer p {
   color: #f25c05; }
 

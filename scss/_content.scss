@@ -467,3 +467,13 @@ body {
 	@extend .borde-puntos;
 	background-color: $textGreyWaight;
 }
+
+//BOTONES JS
+
+.botonJs {
+	display: $d-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: $margin-medium;
+}
