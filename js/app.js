@@ -1,54 +1,28 @@
-function login(){
-    let name = prompt("Ingrese su nombre: ");
-    let edad = parseInt(prompt(name + " ingrese su edad: "));
-    if(edad >= 18){
-        let nombre = "ayelen";
-        let usuario = "";
-        while(nombre !== usuario) {
-            usuario = prompt("Ingrese nombre de usuario: ").toLowerCase();
-            console.log("Usuario renonocido: " + usuario);
-        }
-        alert("Bienvenido/a: " + usuario);
-    }else {
-        alert("Solo permitido para mayores de 18 años");
-    }
-}
 
-function elegiPlan(){
-    let productos = parseInt(prompt(" elegir tu plan \n" + "1 - plan running\n" + "2 - plan aguas abiertas\n" + "3 - plan fitness: "));
-    console.log(productos);
-    switch(productos) {
-        case 1:
-            alert("Bienvenido a tu plan 01");
-            break;
-        case 2:
-            alert("Bienvenidon a tu plan 02");
-            break;
-        case 3:
-            alert("Bienvenido a tu plan 03");
-            break;
-        default:
-            alert("No contamos con ese plan");
-            break;
-    }
-}
+// obtengo los elementos del DOM
+const showroom = document.getElementById('showroom');
+const filtroDeporte = document.getElementById('filtro-deporte');
 
-class Producto {
+// creo la base de datos de productos
+const dbProductos = [
+    {id: 1, nombre: "Toallon", desc: "Toallon microfibra", deporte: "otros", precio: 1500},
+    {id: 2, nombre: "Mancuernas", desc: "Mancuernas regulables", deporte: "fitness", precio: 5000},
+    {id: 3, nombre: "Mat", desc: "Mat calestenia", deporte: "fitness", precio: 2500},
+    {id: 4, nombre: "Tobillera", desc: "Tobillera fitness", deporte: "fitness", precio: 4000},
+    {id: 5, nombre: "Cinturon", desc: "Cinturon yoga", deporte: "fitness", precio: 2000},
+    {id: 6, nombre: "Remera", desc: "Remera dry fit", deporte: "otros", precio: 5500},
+    {id: 7, nombre: "Calza", desc: "Calza ergonomica", deporte: "otros", precio: 7500},
+    {id: 8, nombre: "Short", desc: "Short elastizado", deporte: "otros", precio: 6000},
+    {id: 9, nombre: "Savavidas", desc: "Salvavida apto remo", deporte: "sup", precio: 10000},
+    {id: 10, nombre: "Remo", desc: "Remo extensible", deporte: "sup", precio: 20000},
+    {id: 11, nombre: "Pita", desc: "Pita tabla SUP", deporte: "sup", precio: 12000},
+    {id: 12, nombre: "Asiento", desc: "Asiento ergonomico", deporte: "otros", precio: 5000},
+    {id: 13, nombre: "Inflador", desc: "Inflador de mano", deporte: "otros", precio: 7600},
+    {id: 14, nombre: "Casco", desc: "Casco bicicleta", deporte: "otros", precio: 5400},
+];
 
-    constructor(id, nombre, modelo, precio) {
-        this.id = id;
-        this.nombre = nombre.toUpperCase();
-        this.modelo = modelo;
-        this.precio  = parseFloat(precio);
-        this.vendido = false;
-    }
 
-    sumaIva() {
-        // Retorna el precio del producto con IVA.
-        return this.precio * 1.21;
-    }
-}
-
+// Definicion de carrito
 class Carrito {
 
     constructor() {
@@ -67,92 +41,95 @@ class Carrito {
         
         for (let i = 0; i < this.listaCompra.length; i++) {
             let productoActual = this.listaCompra[i];
-            total = total + productoActual.sumaIva();
+            total = total + productoActual.precio;
           }
         return total
     }
+
+    agregarProducto(idProducto) {
+        // Obtiene el producto de la base de datos y lo agrega al carrito
+        let producto = dbProductos.find(
+            (prod) => prod.id == idProducto
+        );
+        console.log(producto);
+        this.agregaProducto(producto);
+    }
+    
+    comprar() {
+        // Lista los productos en el carrito e informa el valor total
+        console.table(this.listaCompra);
+        muestraCompra("El total por la compra es: $" + this.sumaTotal())
+    }    
 }
 
 // Creo el carrito
 const carrito = new Carrito();
 
-// Creo los productos del catalogo
-const producto0 = new Producto(0, "Toallon", "fibra", 4000);
-const producto1 = new Producto(1, "Mancuernas", "plastico", 2000);
-const producto2 = new Producto(2, "Mancuernas", "hierro", 5000);
-const producto3 = new Producto(3, "Mat", "goma", 3000);
-const producto4 = new Producto(4, "Tobillera", "chica", 3000);
-const producto5 = new Producto(5, "Tobillera", "grande", 4000);
-const producto6 = new Producto(6, "Cinturon", "largo", 3500);
-const producto7 = new Producto(7, "Cinturon", "corto", 2500);
-const producto8 = new Producto(8, "Remera", "mujer", 4000);
-const producto9 = new Producto(9, "Remera", "hombre", 4000);
-const producto10 = new Producto(10, "Calza corta", "mujer", 5000);
-const producto11 = new Producto(11, "Short", "hombre", 5000);
-const producto12 = new Producto(12, "Baston", "algodon", 2500);
-const producto13 = new Producto(13, "Banda elastica", "chica", 30000);
-const producto14 = new Producto(14, "Banda elastica", "grande", 3000);
+// Muestro el total de compra
+function muestraCompra(texto) {
+    showroom.innerHTML = `
+        <div class="texto-compra">
+            <p>${texto}</p>
+        </div>
+    `;
+};
 
-// El id de producto coincide con el indice en la base de datos.
-const DB = [
-    producto0,
-    producto1, 
-    producto2, 
-    producto3, 
-    producto4,
-    producto5,
-    producto6,
-    producto7,
-    producto8,
-    producto9,
-    producto10,
-    producto11,
-    producto12,
-    producto13,
-    producto14,
-];
+// Muetra una lista ordenada de productos
+function listarProductos(productos) {
+    // Ordenar los productos por nombre
+    const listaOrdenada = productos.sort(
+        (a,b) => {
+            if(a.nombre < b.nombre) {
+                return -1;
+            }
+            if(a.nombre > b.nombre) {
+                return 1;
+            }
+            return 0;
+        }
+    )
+    // Limpia el contenido de showroom
+    showroom.innerHTML = "";
 
+    for (let indice = 0; indice < productos.length; indice++) {
+        // Producto actual
+        let producto = productos[indice];
 
-function sortArrays(a,b){
-    /* Function para ordenar los productos por nombre  */
-    if(a.nombre < b.nombre) {
-        return -1;
-    }
-    if(a.nombre > b.nombre) {
-        return 1;
-    }
-    return 0;
-}
-
-function listarProductos() {
-    /* Ordena el listado de productos alfabeticamente usando la propiedad nombre
-    y muestra la lista en un alert */
-    const listaOrdenada = DB.sort(sortArrays)
-    console.table(listaOrdenada);
-}
-
-function agregarProducto() {
-    /* Pide el ID del producto a agregar al carrito y valida que el id exista. 
-    */
-    let idProducto = prompt("Ingrese el ID de producto:");
-
-    // Valida que el producto exista en la base de datos.
-    idProducto = parseInt(idProducto);
-    if (idProducto < 0 || idProducto > DB.length-1) {
-        alert("Producto no encontrado");
-        
-    } else {
-
-        // Obtiene el producto de la base de datos y lo agrega al carrito
-        let producto = DB[idProducto];
-        carrito.agregaProducto(producto);       
+        // Creo el card contenedor
+        let div = document.createElement('div');
+        div.className = 'producto';
+        div.innerHTML = `
+            <div class="card">
+                <span class="card-title">${producto.nombre}</span>
+                <div class="card-content">
+                    <p>${producto.desc}</p>
+                    <p>Deporte: ${producto.deporte}</p>
+                    <p>$${producto.precio}</p>
+                </div>
+                <button onClick="carrito.agregarProducto(${producto.id})">Agregar</button>
+            </div>
+        `;
+        showroom.appendChild(div);
     }
 }
 
-function comprar() {
-    /* Lista los productos en el carrito e informa el valor total incluyendo IVA
-    */ 
+// Muestro el listado total de productos
+listarProductos(dbProductos);
 
-    console.table(carrito.listaCompra);
-    alert("El total por la compra es: $" + carrito.sumaTotal());
-}
+// Event listener para change del filtro
+filtroDeporte.addEventListener(
+    'change',
+    () => {
+        console.log(filtroDeporte.value);
+
+        if(filtroDeporte.value == 'all') {
+            listarProductos(dbProductos);
+        } else {
+            let productosFiltrados = dbProductos.filter(
+                (producto) => { return producto.deporte == filtroDeporte.value }
+            );
+            console.log(productosFiltrados);
+            listarProductos(productosFiltrados);
+        }
+    }
+)
