@@ -1,15 +1,10 @@
 
 // obtengo los elementos del DOM
-// creo la constante showroom y filtroDeporte.
-// Le asigno el ID como parámetro al método getElementById para obtener el elemento que machea
-// en el DOM.
 const showroom = document.getElementById('showroom');
 const filtroDeporte = document.getElementById('filtro-deporte');
+const buscarProducto = document.getElementById('buscar-producto');
 
 // creo la base de datos de productos.
-// creo la constante dbProductos.
-// creo un array donde indico id, nombre y demás propiedades de cada producto. Se lo asigno a
-// la variable dbProductos.
 const dbProductos = [
     {id: 1, nombre: "Toallon", desc: "Toallon microfibra", deporte: "otros", precio: 1500},
     {id: 2, nombre: "Mancuernas", desc: "Mancuernas regulables", deporte: "fitness", precio: 5000},
@@ -29,43 +24,28 @@ const dbProductos = [
 
 
 // Definicion de carrito
-// creo la clase carrito. plantilla.
 class Carrito {
 
-    // indico método constructor para generar un objeto dentro de la clase
-    // al métrodo this le aplico la propiedad listaCompra y le asigno un array vacío
     constructor() {
         this.listaCompra = []
     }
 
-    // creo el objeto agregarProducto y le paso el parámetro producto
     agregaProducto(producto) {
         // Agrega un producto a la lista de compras.
-        // al método this le paso la propiedad listaCompra y el método push con el parámetro
-        // producto, lo que hará que pushee, agregue un producto.
         this.listaCompra.push(producto);
-        // le pido que envíe un mensaje a la consola y le acoplo la propiedad length a listaCompra
-        // y al método this para que me indique el largo de los elementos del array listaCompra.
         console.log("producto agregado, total productos: " + this.listaCompra.length);
     }
 
-    // creo el metodo sumaTotal y no le paso parámetros
     sumaTotal() {
-        // Suma el precio de todos los productos en la lista de compras mas IVA.
-        //creo la variable total y le asigno valor cero.
+        // Suma el precio de todos los productos en la lista de compras.
         let total = 0;
         
-        //creo un bucle con la declaración for y le paso 3 parámetros.
-        // creo la variable i y le asigno valor cero. Si la variable i es menor al valor que da
-        // el metodo length en la propiedad listaCompra en el objeto this que refiere a carrito.
         for (let i = 0; i < this.listaCompra.length; i++) {
-            // genero la variable producto Actual y le asigno un vagón i del array listaCompra. 
+
             let productoActual = this.listaCompra[i];
-            // llamo a la variable total y le asigno que sume total más la propiedad precio de
-            // la variable producto actual.
+
             total = total + productoActual.precio;
           }
-          // la declaración return finaliza la ejecución y solicita de el valor de la variable total.
         return total
     }
 
@@ -206,5 +186,16 @@ filtroDeporte.addEventListener(
             // será el nuevo array.
             listarProductos(productosFiltrados);
         }
+    }
+)
+
+buscarProducto.addEventListener(
+    'input',
+    () => {
+        let productosFiltrados = dbProductos.filter(
+            producto => 
+                -1 != producto.nombre.toLocaleLowerCase().indexOf(buscarProducto.value.toLocaleLowerCase())
+        );
+        listarProductos(productosFiltrados);        
     }
 )
