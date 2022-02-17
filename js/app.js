@@ -27,63 +27,70 @@ const dbProductos = [
 class Carrito {
 
     constructor() {
-        this.listaCompra = []
+        
+        let listaCompra = JSON.parse(sessionStorage.getItem('listaCompra'));
+        
+        if (!listaCompra) { 
+            listaCompra = [];
+            sessionStorage.setItem('listaCompra', JSON.stringify(listaCompra))
+        }
     }
 
     agregaProducto(producto) {
         // Agrega un producto a la lista de compras.
-        this.listaCompra.push(producto);
-        console.log("producto agregado, total productos: " + this.listaCompra.length);
+
+        let listaCompra = JSON.parse(sessionStorage.getItem('listaCompra'));
+        
+        listaCompra.push(producto);
+        
+        sessionStorage.setItem('listaCompra', JSON.stringify(listaCompra));
+
+        console.log("producto agregado, total productos: " + listaCompra.length);
     }
 
     sumaTotal() {
         // Suma el precio de todos los productos en la lista de compras.
         let total = 0;
-        
-        for (let i = 0; i < this.listaCompra.length; i++) {
+        let listaCompra = JSON.parse(sessionStorage.getItem('listaCompra'));
 
-            let productoActual = this.listaCompra[i];
+        for (let i = 0; i < listaCompra.length; i++) {
+
+            let productoActual = listaCompra[i];
 
             total = total + productoActual.precio;
           }
         return total
     }
 
-    // creo el metodo agregarProducto y le paso de parámetro idProducto
     agregarProducto(idProducto) {
-        // Obtiene el producto de la base de datos y lo agrega al carrito
-        // creo la variable producto y le asigno la constante dbProductos a la que le aplico el
-        // metodo find y de parámetro le paso una función flecha que traiga la propiedad prod que
-        // tenga el mismo id que idProducto
+
         let producto = dbProductos.find(
             (prod) => prod.id == idProducto
         );
-        // le envío el mensaje a la consola con la variable producto
+
         console.log(producto);
-        // llamo al métrodo agregarProducto y le paso la propiedad producto.
+
         this.agregaProducto(producto);
     }
     
-    // creo el objeto comprar sin pasarle parámetros
     comprar() {
-        // Lista los productos en el carrito e informa el valor total
-        // crea en consola una tabla con el metodo .table y de parametro le paso la propiedad
-        // listaCompra.
-        console.table(this.listaCompra);
-        // declaro la función muestraCompra que mostrará el texto y concatena el método sumaTotal.
+
+        let listaCompra = JSON.parse(sessionStorage.getItem('listaCompra'));
+
+        console.table(listaCompra);
+
         muestraCompra("El total por la compra es: $" + this.sumaTotal())
+
+        // Borro la propiedad para empezar de nuevo.
+        sessionStorage.removeItem('listaCompra');
     }    
 }
 
 // Creo el carrito
-// declaro la constante carrito a la cual se le asigna el constructor carrito de la clase.
 const carrito = new Carrito();
 
 // Muestro el total de compra
-// declaro la función muestraCompra con el parámetro texto
 function muestraCompra(texto) {
-    // aplico la propiedad innerHTML a la constante showroom que es un elemento del DOM
-    // de esta forma inserto HTML desde el JS. En este caso inserto texto.
     showroom.innerHTML = `
         <div class="texto-compra">
             <p>${texto}</p>
@@ -92,15 +99,10 @@ function muestraCompra(texto) {
 };
 
 // Muetra una lista ordenada de productos
-// Declaro la función listarProductos a la cual le paso de parámetro los productos.
 function listarProductos(productos) {
-    // Ordenar los productos por nombre
-    // creo la constante listaOrdenada a la cual le será asignado lo que resulte de aplicarle el
-    // método sort al parámetro productos que aplica sobre la función listarProductos.
+
     const listaOrdenada = productos.sort(
-        // creo función flecha, le paso de parámetro dos valores, a y b.
-        // a los cuales le asigno condicionales que permitan ordenar los valores comparandolos
-        // de a dos. Si el valor a es menor a b, entonces lo pone primero, retorna -1 y así.
+
         (a,b) => {
             if(a.nombre < b.nombre) {
                 return -1;
@@ -112,23 +114,15 @@ function listarProductos(productos) {
         }
     )
     // Limpia el contenido de showroom
-    // Le aplico la propiedad innerHTML a la constante showroom y le asigno un texto vacío.
     showroom.innerHTML = "";
 
-    // creo un bucle for y le paso tres parámetros a recorrer. creo la variable i y le asigno el
-    // valor cero, luego pido que compare si i es menor al largo de los productos, finalmente
-    // i++ es para que le agregue uno a la variable i.
     for (let indice = 0; indice < productos.length; indice++) {
         // Producto actual
-        // declaro la variable producto y le asigno el parámetro productos con el array indice o i.
         let producto = productos[indice];
 
         // Creo el card contenedor
-        // declaro la variable div y le asigno el método createElement con div de parámetro.
         let div = document.createElement('div');
-        // accedo al div mediante la propiedad className y se la asigno a producto.
         div.className = 'producto';
-        // accedo al div mediante la propiedad innerHTML para insertar los productos y el boton x id.
         div.innerHTML = `
         <section id="section-disciplinas">
             <div class="card-group col-md-4">
@@ -146,44 +140,31 @@ function listarProductos(productos) {
             </div>
         </section>
         `;
-        // llamo a la constante showroom, la accedo mediante el método appendChild que tiene el div
-        // de parámetro. appendChild agrega un elemento al final.
+
         showroom.appendChild(div);
     }
 }
 
 // Muestro el listado total de productos
-// llamo a la función listarProdutos y le paso de parámetro dbProductos que es la base de datos.
 listarProductos(dbProductos);
 
 // Event listener para change del filtro
-// llamo a la constante filtroDeporte que contiene el filter del DOM y la accedo desde el método
-// addEventListener, le pido que se quede esperando un evento, el cual será change.
 filtroDeporte.addEventListener(
     'change',
-    // declaro la función flecha sin parámetros
+
     () => {
-        // mando mensaje a la consola con el parámetro de la constante filtroDeporte accedida
-        // desde la propiedad valor. Es decir la consola mostrará el valor del elemento filtrado.
         console.log(filtroDeporte.value);
 
-        // Le paso un condicional if else. Si el valor que trae de la constante es igual a All,
-        // entonces que llame a la función listarProductos con la base de datos como parámetro.
         if(filtroDeporte.value == 'all') {
             listarProductos(dbProductos);
-        // Si esto es false, declaro una variable productosFiltrados que asignará el resultado de
-        // aplicar el método filter a la base de datos de productos. Como parámetro le paso una
-        // función flecha que tiene de parámetro producto y un return que es true si la propiedad
-        // deporte que aplica a producto es igual al resultado de ejecutar el metodo value a
-        // filtroDeporte.
+
         } else {
             let productosFiltrados = dbProductos.filter(
                 (producto) => { return producto.deporte == filtroDeporte.value }
             );
-            // declaro en la consola la variable productosFiltrados
+
             console.log(productosFiltrados);
-            // llamo la función listarProductos y la ejecuto con el parámetro productosFiltrados que
-            // será el nuevo array.
+
             listarProductos(productosFiltrados);
         }
     }
