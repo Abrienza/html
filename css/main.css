@@ -264,7 +264,7 @@ body {
   font-size: 3rem;
   color: #f25c05; }
 
-.texto, .article-paraque p, .section-iconos p, #section-disciplinas div article div p, #section-propuesta div article div p, .sobre-mi p, #accordion-preguntas-frecuentes button, .respuestas-acordeon, .contacto-form, footer p {
+.texto, .article-paraque p, .section-iconos p, #section-disciplinas div article div p, #section-propuesta div article div p, .sobre-mi p, #accordion-preguntas-frecuentes button, .respuestas-acordeon, .contacto-form, .store-form, footer p {
   text-align: center;
   color: #262626;
   font-size: 2rem;
@@ -273,7 +273,7 @@ body {
   word-spacing: 2px;
   font-weight: 500; }
 
-.borde-puntos, .section-iconos, #section-disciplinas div article, #section-propuesta div article, .contacto-form, .contacto-form select, .contacto-form input, #boton-enviar {
+.borde-puntos, .section-iconos, #section-disciplinas div article, #section-propuesta div article, .contacto-form, .contacto-form select, .contacto-form input, .store-form, .store-form select, .store-form input, #boton-comprar {
   border: 2px dotted #262626;
   border-radius: 10px;
   border-width: thin;
@@ -295,6 +295,14 @@ body {
     object-fit: cover; }
 
 /* DISCIPLINAS */
+#section-disciplinas {
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
 .videos-disciplinas {
   padding: 1rem;
   margin: 2rem;
@@ -367,20 +375,65 @@ body {
   .contacto-form textarea {
     font-size: 2rem; }
 
-#boton-enviar {
+.store-form {
+  padding: 2rem;
+  background-color: #f28705;
+  text-align: left;
+  margin: 0rem 6rem !important; }
+  .store-form label {
+    font-size: 2rem; }
+  .store-form select {
+    font-size: 2rem; }
+  .store-form input {
+    font-size: 2rem; }
+  .store-form textarea {
+    font-size: 2rem; }
+
+#boton-comprar {
   color: #262626;
   font-size: 2rem;
   letter-spacing: 1px;
   padding: 1rem 3rem 1rem 3rem;
   background-color: #f2eeeb; }
 
+/*
 .botonJs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem; }
-
+	display: $d-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: $margin-medium;
+}*/
+/* JS BACKUP
+        div.innerHTML = `
+            <div class="card">
+                <span class="card-title">${producto.nombre}</span>
+                <div class="card-content">
+                    <p>${producto.desc}</p>
+                    <p>Deporte: ${producto.deporte}</p>
+                    <p>$${producto.precio}</p>
+                </div>
+                <button onClick="carrito.agregarProducto(${producto.id})">Agregar</button>
+            </div>
+        `;*/
+/*div.innerHTML = `
+        <section id="section-disciplinas">
+            <h2 class="textDarkBlue textCenter margin-xlarge">Productos</h2>
+            <div class="card-group">
+                <article class="card">
+                    <img src="./assets/img/disciplinas_ciclismo.jpg" class="card-img-top foto-disciplinas"
+                        alt="Hombres haciendo ciclismo">
+                    <div class="card-body">
+                        <h3 class="card-title">${producto.nombre}</h3>
+                        <p class="card-text">${producto.desc}</p>
+                        <p class="card-text">Deporte: ${producto.deporte}</p>
+                        <p class="card-text">$${producto.precio}</p>
+                        <button type="submit" class="btn btn-primary" id="boton-comprar" onClick="carrito.agregarProducto(${producto.id})">Agregar al carrito</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        `;*/
 footer p {
   color: #f25c05; }
 

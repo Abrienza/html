@@ -150,15 +150,21 @@ function listarProductos(productos) {
         div.className = 'producto';
         // accedo al div mediante la propiedad innerHTML para insertar los productos y el boton x id.
         div.innerHTML = `
-            <div class="card">
-                <span class="card-title">${producto.nombre}</span>
-                <div class="card-content">
-                    <p>${producto.desc}</p>
-                    <p>Deporte: ${producto.deporte}</p>
-                    <p>$${producto.precio}</p>
-                </div>
-                <button onClick="carrito.agregarProducto(${producto.id})">Agregar</button>
+        <section id="section-disciplinas">
+            <div class="card-group col-md-4">
+                <article class="card">
+                    <img src="./assets/img/disciplinas_ciclismo.jpg" class="card-img-top foto-disciplinas"
+                        alt="Hombres haciendo ciclismo">
+                    <div class="card-body">
+                        <h3 class="card-title">${producto.nombre}</h3>
+                        <p class="card-text">${producto.desc}</p>
+                        <p class="card-text">Deporte: ${producto.deporte}</p>
+                        <p class="card-text">$${producto.precio}</p>
+                        <button type="submit" class="btn btn-primary" id="boton-comprar" onClick="carrito.agregarProducto(${producto.id})">Agregar al carrito</button>
+                    </div>
+                </article>
             </div>
+        </section>
         `;
         // llamo a la constante showroom, la accedo mediante el método appendChild que tiene el div
         // de parámetro. appendChild agrega un elemento al final.

@@ -71,22 +71,30 @@
 
     <!-- Inicia Main -->
     <main class="main-grid">
-
-        <section class="controles">
-
-            <select id="filtro-deporte">
-                <option value="all">Todos</option>
-                <option value="sup">Standup Paddle</option>
-                <option value="fitness">Fitness</option>
-                <option value="otros">Otros</option>
-            </select>
-        
-            <button class="botonJs" onclick="carrito.comprar()">Comprar</button>
-        
+        <section>
+            <h2 class="titulo">Nuestro Store</h2>
+            <!--Aquí comienza busqueda y filtro de store-->
+            <div class="controles row g-3 store-form" action="archivo.php" method="post" target="_blank">
+                <div class="col-md-6">
+                    <label for="buscar" class="form-label">Buscar</label>
+                    <input type="texto" class="form-control" id="buscar" placeholder="algo">
+                </div>
+                <div class="col-md-4">
+                    <label for="filtro-deporte" class="form-label">Filtrar</label>
+                    <select id="filtro-deporte" class="form-select">
+                        <option selected value="all">Todos</option>
+                        <option value="sup">Standup Paddle</option>
+                        <option value="fitness">Fitness</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary" id="boton-comprar" onclick="carrito.comprar()">Comprar</button>
+                </div>
+            </div>
+            <!--Aquí cierra busqueda y filtro de store-->
         </section>
-
         <section id="showroom"></section>
-
     </main>
     <!-- Cierra Main -->
 
