@@ -492,7 +492,16 @@ body {
 	}
 }
 
-#boton-comprar {
+.btn-js {
+	color: $textBlack;
+	font-size: $font-small;
+	letter-spacing: 1px;
+	padding: 1rem 3rem 1rem 3rem;
+	@extend .borde-puntos;
+	background-color: $textGreyWaight;
+}
+
+#boton-finalizar-compra {
 	color: $textBlack;
 	font-size: $font-small;
 	letter-spacing: 1px;

@@ -273,7 +273,7 @@ body {
   word-spacing: 2px;
   font-weight: 500; }
 
-.borde-puntos, .section-iconos, #section-disciplinas div article, #section-propuesta div article, .contacto-form, .contacto-form select, .contacto-form input, .store-form, .store-form select, .store-form input, #boton-comprar {
+.borde-puntos, .section-iconos, #section-disciplinas div article, #section-propuesta div article, .contacto-form, .contacto-form select, .contacto-form input, .store-form, .store-form select, .store-form input, .btn-js, #boton-finalizar-compra {
   border: 2px dotted #262626;
   border-radius: 10px;
   border-width: thin;
@@ -389,7 +389,14 @@ body {
   .store-form textarea {
     font-size: 2rem; }
 
-#boton-comprar {
+.btn-js {
+  color: #262626;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 1rem 3rem 1rem 3rem;
+  background-color: #f2eeeb; }
+
+#boton-finalizar-compra {
   color: #262626;
   font-size: 2rem;
   letter-spacing: 1px;

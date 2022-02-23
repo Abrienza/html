@@ -36,9 +36,15 @@ class Carrito {
         }
     }
 
-    agregaProducto(producto) {
-        // Agrega un producto a la lista de compras.
+    agregarProducto(idProducto) {
 
+        let producto = dbProductos.find(
+            (prod) => prod.id == idProducto
+        );
+
+        console.log(producto);
+
+        // Agrega un producto a la lista de compras.
         let listaCompra = JSON.parse(sessionStorage.getItem('listaCompra'));
         
         listaCompra.push(producto);
@@ -47,7 +53,7 @@ class Carrito {
 
         console.log("producto agregado, total productos: " + listaCompra.length);
     }
-
+    
     sumaTotal() {
         // Suma el precio de todos los productos en la lista de compras.
         let total = 0;
@@ -61,17 +67,6 @@ class Carrito {
           }
         return total
     }
-
-    agregarProducto(idProducto) {
-
-        let producto = dbProductos.find(
-            (prod) => prod.id == idProducto
-        );
-
-        console.log(producto);
-
-        this.agregaProducto(producto);
-    }
     
     comprar() {
 
@@ -82,12 +77,16 @@ class Carrito {
         muestraCompra("El total por la compra es: $" + this.sumaTotal())
 
         // Borro la propiedad para empezar de nuevo.
-        sessionStorage.removeItem('listaCompra');
+        sessionStorage.setItem('listaCompra', JSON.stringify([]))
     }    
+    
 }
 
 // Creo el carrito
 const carrito = new Carrito();
+
+// carrito.comprar()
+
 
 // Muestro el total de compra
 function muestraCompra(texto) {
@@ -96,7 +95,58 @@ function muestraCompra(texto) {
             <p>${texto}</p>
         </div>
     `;
+
 };
+
+const cierraCompra = document.querySelector("#boton-finalizar-compra");
+
+cierraCompra.addEventListener(
+    "click",
+    () => {
+
+        // Borro la propiedad para empezar de nuevo.
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          });
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Gracias por elegirnos!',
+            text: `Desea confirmar la compra? Monto total: ${carrito.sumaTotal()}`,
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Si, confirmo!',
+            cancelButtonText: 'No, cancelar!',
+            reverseButtons: true
+          })
+          .then((result) => {
+            // Apreto OK
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Confirmado!',
+                'Su compra fue realizada con éxito. Por favor revise su email.',
+                'success'
+              )
+              // Solo borro el storage si la compra se confirma.
+              sessionStorage.setItem('listaCompra', JSON.stringify([]))
+
+            // Apreto No
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Cancelada!',
+                'Su compra fue cancelada.',
+                'error'
+              )
+            }
+          })
+});
+
 
 // Muetra una lista ordenada de productos
 function listarProductos(productos) {
@@ -134,7 +184,7 @@ function listarProductos(productos) {
                         <p class="card-text">${producto.desc}</p>
                         <p class="card-text">Deporte: ${producto.deporte}</p>
                         <p class="card-text">$${producto.precio}</p>
-                        <button type="submit" class="btn btn-primary" id="boton-comprar" onClick="carrito.agregarProducto(${producto.id})">Agregar al carrito</button>
+                        <button type="submit" class="btn-js" onClick="carrito.agregarProducto(${producto.id})">Agregar al carrito</button>
                     </div>
                 </article>
             </div>
@@ -170,6 +220,7 @@ filtroDeporte.addEventListener(
     }
 )
 
+// Event listener para imput de busqueda de producto
 buscarProducto.addEventListener(
     'input',
     () => {
