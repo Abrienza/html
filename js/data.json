@@ -1,0 +1,16 @@
+[
+    {"id": 1, "nombre": "Toallon", "desc": "Toallon microfibra", "deporte": "otros", "precio": 1500},
+    {"id": 2, "nombre": "Mancuernas", "desc": "Mancuernas regulables", "deporte": "fitness", "precio": 5000},
+    {"id": 3, "nombre": "Mat", "desc": "Mat calestenia", "deporte": "fitness", "precio": 2500},
+    {"id": 4, "nombre": "Tobillera", "desc": "Tobillera fitness", "deporte": "fitness", "precio": 4000},
+    {"id": 5, "nombre": "Cinturon", "desc": "Cinturon yoga", "deporte": "fitness", "precio": 2000},
+    {"id": 6, "nombre": "Remera", "desc": "Remera dry fit", "deporte": "otros", "precio": 5500},
+    {"id": 7, "nombre": "Calza", "desc": "Calza ergonomica", "deporte": "otros", "precio": 7500},
+    {"id": 8, "nombre": "Short", "desc": "Short elastizado", "deporte": "otros", "precio": 6000},
+    {"id": 9, "nombre": "Savavidas", "desc": "Salvavida apto remo", "deporte": "sup", "precio": 10000},
+    {"id": 10, "nombre": "Remo", "desc": "Remo extensible", "deporte": "sup", "precio": 20000},
+    {"id": 11, "nombre": "Pita", "desc": "Pita tabla SUP", "deporte": "sup", "precio": 12000},
+    {"id": 12, "nombre": "Asiento", "desc": "Asiento ergonomico", "deporte": "otros", "precio": 5000},
+    {"id": 13, "nombre": "Inflador", "desc": "Inflador de mano", "deporte": "otros", "precio": 7600},
+    {"id": 14, "nombre": "Casco", "desc": "Casco bicicleta", "deporte": "otros", "precio": 5400}    
+]

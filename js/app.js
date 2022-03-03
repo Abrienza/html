@@ -3,25 +3,20 @@
 const showroom = document.getElementById('showroom');
 const filtroDeporte = document.getElementById('filtro-deporte');
 const buscarProducto = document.getElementById('buscar-producto');
+const cierraCompra = document.querySelector("#boton-finalizar-compra");
 
-// creo la base de datos de productos.
-const dbProductos = [
-    {id: 1, nombre: "Toallon", desc: "Toallon microfibra", deporte: "otros", precio: 1500},
-    {id: 2, nombre: "Mancuernas", desc: "Mancuernas regulables", deporte: "fitness", precio: 5000},
-    {id: 3, nombre: "Mat", desc: "Mat calestenia", deporte: "fitness", precio: 2500},
-    {id: 4, nombre: "Tobillera", desc: "Tobillera fitness", deporte: "fitness", precio: 4000},
-    {id: 5, nombre: "Cinturon", desc: "Cinturon yoga", deporte: "fitness", precio: 2000},
-    {id: 6, nombre: "Remera", desc: "Remera dry fit", deporte: "otros", precio: 5500},
-    {id: 7, nombre: "Calza", desc: "Calza ergonomica", deporte: "otros", precio: 7500},
-    {id: 8, nombre: "Short", desc: "Short elastizado", deporte: "otros", precio: 6000},
-    {id: 9, nombre: "Savavidas", desc: "Salvavida apto remo", deporte: "sup", precio: 10000},
-    {id: 10, nombre: "Remo", desc: "Remo extensible", deporte: "sup", precio: 20000},
-    {id: 11, nombre: "Pita", desc: "Pita tabla SUP", deporte: "sup", precio: 12000},
-    {id: 12, nombre: "Asiento", desc: "Asiento ergonomico", deporte: "otros", precio: 5000},
-    {id: 13, nombre: "Inflador", desc: "Inflador de mano", deporte: "otros", precio: 7600},
-    {id: 14, nombre: "Casco", desc: "Casco bicicleta", deporte: "otros", precio: 5400},
-];
+let dbProductos;
 
+// Obtiene los productos y muestra el listado inicial
+fetch("./js/data.json")
+    .then(
+        response => response.json()
+    ).then(
+        jsondata => {
+            dbProductos = jsondata;
+            listarProductos(dbProductos);
+        }
+    );
 
 // Definicion de carrito
 class Carrito {
@@ -31,8 +26,7 @@ class Carrito {
         let listaCompra = JSON.parse(sessionStorage.getItem('listaCompra'));
         
         if (!listaCompra) { 
-            listaCompra = [];
-            sessionStorage.setItem('listaCompra', JSON.stringify(listaCompra))
+            sessionStorage.setItem('listaCompra', JSON.stringify([]));
         }
     }
 
@@ -85,9 +79,6 @@ class Carrito {
 // Creo el carrito
 const carrito = new Carrito();
 
-// carrito.comprar()
-
-
 // Muestro el total de compra
 function muestraCompra(texto) {
     showroom.innerHTML = `
@@ -97,8 +88,6 @@ function muestraCompra(texto) {
     `;
 
 };
-
-const cierraCompra = document.querySelector("#boton-finalizar-compra");
 
 cierraCompra.addEventListener(
     "click",
@@ -147,7 +136,6 @@ cierraCompra.addEventListener(
           })
 });
 
-
 // Muetra una lista ordenada de productos
 function listarProductos(productos) {
 
@@ -194,9 +182,6 @@ function listarProductos(productos) {
         showroom.appendChild(div);
     }
 }
-
-// Muestro el listado total de productos
-listarProductos(dbProductos);
 
 // Event listener para change del filtro
 filtroDeporte.addEventListener(
