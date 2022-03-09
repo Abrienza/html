@@ -1,13 +1,14 @@
 
-// obtengo los elementos del DOM
+// Obtengo los elementos del DOM
 const showroom = document.getElementById('showroom');
 const filtroDeporte = document.getElementById('filtro-deporte');
 const buscarProducto = document.getElementById('buscar-producto');
 const cierraCompra = document.querySelector("#boton-finalizar-compra");
 
+// Creo variable donde se guardarán los productos
 let dbProductos;
 
-// Obtiene los productos y muestra el listado inicial
+// Fetch, obtiene los productos, luego los muestra como el listado inicial
 fetch("./js/data.json")
     .then(
         response => response.json()
@@ -89,6 +90,55 @@ function muestraCompra(texto) {
 
 };
 
+// Muetra una lista ordenada de productos
+function listarProductos(productos) {
+
+    const listaOrdenada = productos.sort(
+
+        (a,b) => {
+            if(a.nombre < b.nombre) {
+                return -1;
+            }
+            if(a.nombre > b.nombre) {
+                return 1;
+            }
+            return 0;
+        }
+    )
+
+    // Limpia el contenido de showroom
+    showroom.innerHTML = "";
+
+    for (let indice = 0; indice < productos.length; indice++) {
+        // Producto actual
+        let producto = productos[indice];
+
+        // Creo el card contenedor
+        let div = document.createElement('div');
+        div.className = 'producto';
+        div.innerHTML = `
+        <section id="section-disciplinas">
+            <div class="card-group col-md-4">
+                <article class="card">
+                    <img src="./assets/img/disciplinas_ciclismo.jpg" class="card-img-top foto-disciplinas"
+                        alt="Hombres haciendo ciclismo">
+                    <div class="card-body">
+                        <h3 class="card-title">${producto.nombre}</h3>
+                        <p class="card-text">${producto.desc}</p>
+                        <p class="card-text">Deporte: ${producto.deporte}</p>
+                        <p class="card-text">$${producto.precio}</p>
+                        <button type="submit" class="btn-js" onClick="carrito.agregarProducto(${producto.id})">Agregar al carrito</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        `;
+
+        showroom.appendChild(div);
+    }
+}
+
+// Event listener para click del boton comprar
 cierraCompra.addEventListener(
     "click",
     () => {
@@ -135,53 +185,6 @@ cierraCompra.addEventListener(
             }
           })
 });
-
-// Muetra una lista ordenada de productos
-function listarProductos(productos) {
-
-    const listaOrdenada = productos.sort(
-
-        (a,b) => {
-            if(a.nombre < b.nombre) {
-                return -1;
-            }
-            if(a.nombre > b.nombre) {
-                return 1;
-            }
-            return 0;
-        }
-    )
-    // Limpia el contenido de showroom
-    showroom.innerHTML = "";
-
-    for (let indice = 0; indice < productos.length; indice++) {
-        // Producto actual
-        let producto = productos[indice];
-
-        // Creo el card contenedor
-        let div = document.createElement('div');
-        div.className = 'producto';
-        div.innerHTML = `
-        <section id="section-disciplinas">
-            <div class="card-group col-md-4">
-                <article class="card">
-                    <img src="./assets/img/disciplinas_ciclismo.jpg" class="card-img-top foto-disciplinas"
-                        alt="Hombres haciendo ciclismo">
-                    <div class="card-body">
-                        <h3 class="card-title">${producto.nombre}</h3>
-                        <p class="card-text">${producto.desc}</p>
-                        <p class="card-text">Deporte: ${producto.deporte}</p>
-                        <p class="card-text">$${producto.precio}</p>
-                        <button type="submit" class="btn-js" onClick="carrito.agregarProducto(${producto.id})">Agregar al carrito</button>
-                    </div>
-                </article>
-            </div>
-        </section>
-        `;
-
-        showroom.appendChild(div);
-    }
-}
 
 // Event listener para change del filtro
 filtroDeporte.addEventListener(
